@@ -64,3 +64,7 @@ See [IMPLEMENTATION.md](IMPLEMENTATION.md).
 ## License
 
 MIT
+
+## Available now
+
+Importable runtime primitives cover model calls, a named async tool registry, sequential steps, in-memory session messages, and exact-match evaluation. Run `PYTHONPATH=src python -m unittest discover -s tests` or `PYTHONPATH=src python examples/local_run.py`. Provider adapters and external storage are planned.

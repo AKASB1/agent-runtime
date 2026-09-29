@@ -33,3 +33,7 @@ Record one trace per run and one span per model/tool/retrieval call.
 7. persistent memory
 8. evaluation runner
 9. multi-provider routing and failure fallback
+
+## Scaffold checkpoint
+
+The current implementation contains protocol and in-memory primitives only. The listed provider, persistent-memory, and trace milestones remain planned.
