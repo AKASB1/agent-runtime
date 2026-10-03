@@ -1,0 +1,33 @@
+{
+  "problem": "product_mix",
+  "note": "Scripted candidates stand in for a language model; the last candidate is correct and the earlier ones carry typical mistakes.",
+  "candidates": [
+    {
+      "text": "{\"sense\": \"max\", \"variables\": [{\"name\": \"x_a\", \"lb\": 0, \"ub\": 40, \"type\": \"continuous\"}, {\"name\": \"x_b\", \"lb\": 0, \"ub\": null, \"type\": \"continuous\"}], \"objective\": {\"terms\": {\"x_a\": 30, \"x_b\": 20}, \"constant\": 0}, \"constraints\": [{\"name\": \"machine_hours\", \"terms\": {\"x_a\": 2, \"x_b\": 1}, \"sense\": \"<=\", \"rhs\": 100}]}",
+      "mistake": "missing constraint (labour hours)",
+      "expect": "V4_INFEASIBLE_WITNESS_ACCEPTED"
+    },
+    {
+      "text": "{\"sense\": \"max\", \"variables\": [{\"name\": \"x_a\", \"lb\": 0, \"ub\": 40, \"type\": \"continuous\"}, {\"name\": \"x_b\", \"lb\": 0, \"ub\": null, \"type\": \"continuous\"}], \"objective\": {\"terms\": {\"x_a\": 30, \"x_b\": 20}, \"constant\": 0}, \"constraints\": [{\"name\": \"machine_hours\", \"terms\": {\"x_a\": 2, \"x_b\": 1}, \"sense\": \">=\", \"rhs\": 100}, {\"name\": \"labor_hours\", \"terms\": {\"x_a\": 1, \"x_b\": 1}, \"sense\": \"<=\", \"rhs\": 80}]}",
+      "mistake": "reversed inequality (machine hours >= 100)",
+      "expect": "V4_FEASIBLE_WITNESS_REJECTED"
+    },
+    {
+      "text": "{\"sense\": \"max\", \"variables\": [{\"name\": \"x_a\", \"lb\": 0, \"ub\": 40, \"type\": \"continuous\"}, {\"name\": \"x_b\", \"lb\": 0, \"ub\": null, \"type\": \"continuous\"}], \"objective\": {\"terms\": {\"x_a\": 30, \"x_b\": 20}, \"constant\": 0}, \"constraints\": [{\"name\": \"machine_hours\", \"terms\": {\"x_a\": 2, \"x_b\": 1}, \"sense\": \"<=\", \"rhs\": 100}, {\"name\": \"labor_hours\", \"terms\": {\"x_a\": 1, \"x_b\": 1}, \"sense\": \"<=\", \"rhs\": 80}]}",
+      "mistake": null,
+      "expect": null
+    }
+  ],
+  "reports": [
+    {
+      "text": "{\"objective\": 1700, \"values\": {\"x_a\": 20, \"x_b\": 60}}",
+      "mistake": "misreported objective",
+      "expect": "V5_REPORT_MISMATCH"
+    },
+    {
+      "text": "{\"objective\": 1800.0, \"values\": {\"x_a\": 20.0, \"x_b\": 60.0}}",
+      "mistake": null,
+      "expect": null
+    }
+  ]
+}

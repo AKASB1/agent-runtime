@@ -1,0 +1,6 @@
+config,d_cost_ucu,d_cost_ucu_ci,d_latency_p50_ms,d_latency_p50_ms_ci,d_success,d_success_ci,loss,reference,tie,win
+delegate,-16137.9,574.703,2060.92,94.5815,-0.266,0.0154147,30,react_medium,0,0
+keep0.8/delegate,-16573.1,1409.94,2025.75,168.289,-0.3095,0.0307894,10,keep0.8/react_medium,0,0
+keep1.0/delegate,-16573.1,1409.94,2016.9,171.989,-0.234,0.0319828,10,keep1.0/react_medium,0,0
+react_parallel_medium_k4,-8374.8,347.455,-1023.78,62.5277,-0.00966667,0.0115397,15,react_medium,6,9
+react_small_elide,-25170,363.564,-1720.28,2138.24,-0.4825,0.0139694,30,react_medium,0,0

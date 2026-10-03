@@ -1,0 +1,28 @@
+{
+  "problem": "transportation",
+  "note": "Scripted candidates stand in for a language model; the last candidate is correct and the earlier ones carry typical mistakes.",
+  "candidates": [
+    {
+      "text": "{\"sense\": \"min\", \"variables\": [{\"name\": \"x_s1_d1\", \"lb\": 0, \"ub\": null, \"type\": \"continuous\"}, {\"name\": \"x_s1_d2\", \"lb\": 0, \"ub\": null, \"type\": \"continuous\"}, {\"name\": \"x_s1_d3\", \"lb\": 0, \"ub\": null, \"type\": \"continuous\"}, {\"name\": \"x_s2_d1\", \"lb\": 0, \"ub\": null, \"type\": \"continuous\"}, {\"name\": \"x_s2_d2\", \"lb\": 0, \"ub\": null, \"type\": \"continuous\"}, {\"name\": \"x_s2_d3\", \"lb\": 0, \"ub\": null, \"type\": \"continuous\"}], \"objective\": {\"terms\": {\"x_s1_d1\": 4, \"x_s1_d2\": 6, \"x_s1_d3\": 9, \"x_s2_d1\": 5, \"x_s2_d2\": 3, \"x_s2_d3\": 7}, \"constant\": 0}, \"constraints\": [{\"name\": \"supply_s1\", \"terms\": {\"x_s1_d1\": 1, \"x_s1_d2\": 1, \"x_s1_d3\": 1}, \"sense\": \"<=\", \"rhs\": 30}, {\"name\": \"supply_s2\", \"terms\": {\"x_s2_d1\": 1, \"x_s2_d2\": 1, \"x_s2_d3\": 1}, \"sense\": \"<=\", \"rhs\": 40}, {\"name\": \"demand_d1\", \"terms\": {\"x_s1_d1\": 1, \"x_s2_d1\": 1, \"x_s3_d1\": 1}, \"sense\": \">=\", \"rhs\": 20}, {\"name\": \"demand_d2\", \"terms\": {\"x_s1_d2\": 1, \"x_s2_d2\": 1}, \"sense\": \">=\", \"rhs\": 25}, {\"name\": \"demand_d3\", \"terms\": {\"x_s1_d3\": 1, \"x_s2_d3\": 1}, \"sense\": \">=\", \"rhs\": 25}]}",
+      "mistake": "undeclared variable (x_s3_d1)",
+      "expect": "V1_UNDECLARED_VARIABLE"
+    },
+    {
+      "text": "{\"sense\": \"min\", \"variables\": [{\"name\": \"x_s1_d1\", \"lb\": 0, \"ub\": null, \"type\": \"continuous\"}, {\"name\": \"x_s1_d2\", \"lb\": 0, \"ub\": null, \"type\": \"continuous\"}, {\"name\": \"x_s1_d3\", \"lb\": 0, \"ub\": null, \"type\": \"continuous\"}, {\"name\": \"x_s2_d1\", \"lb\": 0, \"ub\": null, \"type\": \"continuous\"}, {\"name\": \"x_s2_d2\", \"lb\": 0, \"ub\": null, \"type\": \"continuous\"}, {\"name\": \"x_s2_d3\", \"lb\": 0, \"ub\": null, \"type\": \"continuous\"}], \"objective\": {\"terms\": {\"x_s1_d1\": 4, \"x_s1_d2\": 6, \"x_s1_d3\": 9, \"x_s2_d1\": 5, \"x_s2_d2\": 3, \"x_s2_d3\": 7}, \"constant\": 0}, \"constraints\": [{\"name\": \"supply_s1\", \"terms\": {\"x_s1_d1\": 1, \"x_s1_d2\": 1, \"x_s1_d3\": 1}, \"sense\": \"<=\", \"rhs\": 30}, {\"name\": \"supply_s2\", \"terms\": {\"x_s2_d1\": 1, \"x_s2_d2\": 1, \"x_s2_d3\": 1}, \"sense\": \"<=\", \"rhs\": 40}, {\"name\": \"demand_d1\", \"terms\": {\"x_s1_d1\": 1, \"x_s2_d1\": 1}, \"sense\": \"<=\", \"rhs\": 20}, {\"name\": \"demand_d2\", \"terms\": {\"x_s1_d2\": 1, \"x_s2_d2\": 1}, \"sense\": \"<=\", \"rhs\": 25}, {\"name\": \"demand_d3\", \"terms\": {\"x_s1_d3\": 1, \"x_s2_d3\": 1}, \"sense\": \"<=\", \"rhs\": 25}]}",
+      "mistake": "reversed inequality (demand <=)",
+      "expect": "V4_INFEASIBLE_WITNESS_ACCEPTED"
+    },
+    {
+      "text": "{\"sense\": \"min\", \"variables\": [{\"name\": \"x_s1_d1\", \"lb\": 0, \"ub\": null, \"type\": \"continuous\"}, {\"name\": \"x_s1_d2\", \"lb\": 0, \"ub\": null, \"type\": \"continuous\"}, {\"name\": \"x_s1_d3\", \"lb\": 0, \"ub\": null, \"type\": \"continuous\"}, {\"name\": \"x_s2_d1\", \"lb\": 0, \"ub\": null, \"type\": \"continuous\"}, {\"name\": \"x_s2_d2\", \"lb\": 0, \"ub\": null, \"type\": \"continuous\"}, {\"name\": \"x_s2_d3\", \"lb\": 0, \"ub\": null, \"type\": \"continuous\"}], \"objective\": {\"terms\": {\"x_s1_d1\": 4, \"x_s1_d2\": 6, \"x_s1_d3\": 9, \"x_s2_d1\": 5, \"x_s2_d2\": 3, \"x_s2_d3\": 7}, \"constant\": 0}, \"constraints\": [{\"name\": \"supply_s1\", \"terms\": {\"x_s1_d1\": 1, \"x_s1_d2\": 1, \"x_s1_d3\": 1}, \"sense\": \"<=\", \"rhs\": 30}, {\"name\": \"supply_s2\", \"terms\": {\"x_s2_d1\": 1, \"x_s2_d2\": 1, \"x_s2_d3\": 1}, \"sense\": \"<=\", \"rhs\": 40}, {\"name\": \"demand_d1\", \"terms\": {\"x_s1_d1\": 1, \"x_s2_d1\": 1}, \"sense\": \">=\", \"rhs\": 20}, {\"name\": \"demand_d2\", \"terms\": {\"x_s1_d2\": 1, \"x_s2_d2\": 1}, \"sense\": \">=\", \"rhs\": 25}, {\"name\": \"demand_d3\", \"terms\": {\"x_s1_d3\": 1, \"x_s2_d3\": 1}, \"sense\": \">=\", \"rhs\": 25}]}",
+      "mistake": null,
+      "expect": null
+    }
+  ],
+  "reports": [
+    {
+      "text": "{\"objective\": 350.0, \"values\": {\"x_s1_d1\": 20.0, \"x_s1_d2\": 0.0, \"x_s1_d3\": 10.0, \"x_s2_d1\": 0.0, \"x_s2_d2\": 25.0, \"x_s2_d3\": 15.0}}",
+      "mistake": null,
+      "expect": null
+    }
+  ]
+}

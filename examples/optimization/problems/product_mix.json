@@ -1,0 +1,75 @@
+{
+  "id": "product_mix",
+  "kind": "LP",
+  "statement": "A workshop makes products A and B. Each unit of A earns 30 and each unit of B earns 20. A unit of A needs 2 machine hours and 1 labour hour; a unit of B needs 1 machine hour and 1 labour hour. There are 100 machine hours and 80 labour hours this week, and at most 40 units of A can be sold. Fractional units are allowed. How many units of each product maximise the profit?",
+  "data": {
+    "profit": {
+      "A": 30,
+      "B": 20
+    },
+    "machine_hours": {
+      "A": 2,
+      "B": 1,
+      "available": 100
+    },
+    "labour_hours": {
+      "A": 1,
+      "B": 1,
+      "available": 80
+    },
+    "max_units_A": 40
+  },
+  "variables": {
+    "x_a": "units of A",
+    "x_b": "units of B"
+  },
+  "witnesses": [
+    {
+      "point": {
+        "x_a": 20,
+        "x_b": 60
+      },
+      "feasible": true,
+      "note": "uses all machine and labour hours"
+    },
+    {
+      "point": {
+        "x_a": 10,
+        "x_b": 10
+      },
+      "feasible": true,
+      "note": "a small plan"
+    },
+    {
+      "point": {
+        "x_a": 40,
+        "x_b": 30
+      },
+      "feasible": false,
+      "note": "needs 110 machine hours"
+    },
+    {
+      "point": {
+        "x_a": 0,
+        "x_b": 81
+      },
+      "feasible": false,
+      "note": "needs 81 labour hours"
+    },
+    {
+      "point": {
+        "x_a": 41,
+        "x_b": 0
+      },
+      "feasible": false,
+      "note": "sells more than 40 units of A"
+    }
+  ],
+  "tolerances": {
+    "feasibility": 1e-06,
+    "integrality": 1e-06,
+    "objective_abs": 1e-06,
+    "objective_rel": 1e-06,
+    "report_abs": 0.0001
+  }
+}

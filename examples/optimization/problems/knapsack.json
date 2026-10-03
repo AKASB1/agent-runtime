@@ -1,0 +1,77 @@
+{
+  "id": "knapsack",
+  "kind": "ILP",
+  "statement": "Pack a bag that holds 15 kilograms. Six items weigh 5, 4, 6, 3, 7, and 2 kilograms and are worth 10, 7, 12, 5, 13, and 3. Each item is taken whole or left behind. Which items maximise the total worth?",
+  "data": {
+    "weights": [
+      5,
+      4,
+      6,
+      3,
+      7,
+      2
+    ],
+    "values": [
+      10,
+      7,
+      12,
+      5,
+      13,
+      3
+    ],
+    "capacity": 15
+  },
+  "variables": {
+    "x_1": "1 if item 1 is packed",
+    "x_2": "1 if item 2 is packed",
+    "x_3": "1 if item 3 is packed",
+    "x_4": "1 if item 4 is packed",
+    "x_5": "1 if item 5 is packed",
+    "x_6": "1 if item 6 is packed"
+  },
+  "witnesses": [
+    {
+      "point": {
+        "x_1": 1,
+        "x_2": 1,
+        "x_3": 0,
+        "x_4": 0,
+        "x_5": 0,
+        "x_6": 1
+      },
+      "feasible": true,
+      "note": "items 1, 2, 6 (11 kg)"
+    },
+    {
+      "point": {
+        "x_1": 1,
+        "x_2": 0,
+        "x_3": 1,
+        "x_4": 0,
+        "x_5": 1,
+        "x_6": 0
+      },
+      "feasible": false,
+      "note": "18 kg"
+    },
+    {
+      "point": {
+        "x_1": 0,
+        "x_2": 0.5,
+        "x_3": 1,
+        "x_4": 0,
+        "x_5": 1,
+        "x_6": 0
+      },
+      "feasible": false,
+      "note": "half of item 2"
+    }
+  ],
+  "tolerances": {
+    "feasibility": 1e-06,
+    "integrality": 1e-06,
+    "objective_abs": 1e-06,
+    "objective_rel": 1e-06,
+    "report_abs": 0.0001
+  }
+}

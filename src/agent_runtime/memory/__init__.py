@@ -1,4 +1,6 @@
 """In-memory session store; persistence is planned."""
+
+
 class MemoryStore:
     def __init__(self) -> None:
         self._items: dict[str, list[str]] = {}

@@ -1,0 +1,28 @@
+{
+  "problem": "diet",
+  "note": "Scripted candidates stand in for a language model; the last candidate is correct and the earlier ones carry typical mistakes.",
+  "candidates": [
+    {
+      "text": "{\"sense\": \"min\", \"variables\": [{\"name\": \"x_oats\", \"lb\": 0, \"ub\": 10, \"type\": \"continuous\"}, {\"name\": \"x_milk\", \"lb\": 0, \"ub\": 10, \"type\": \"continuous\"}, {\"name\": \"x_eggs\", \"lb\": 0, \"ub\": 10, \"type\": \"continuous\"}], \"objective\": {\"terms\": {\"x_oats\": 0.3, \"x_milk\": 0.25, \"x_eggs\": 0.5}, \"constant\": 0}, \"constraints\": [{\"name\": \"protein\", \"terms\": {\"x_oats\": 5, \"x_milk\": 8, \"x_eggs\": 130}, \"sense\": \">=\", \"rhs\": 60}, {\"name\": \"calories\", \"terms\": {\"x_oats\": 300, \"x_milk\": 150, \"x_eggs\": 80}, \"sense\": \">=\", \"rhs\": 1800}]}",
+      "mistake": "coefficient off by a factor of 10 (egg protein 130)",
+      "expect": "V4_INFEASIBLE_WITNESS_ACCEPTED"
+    },
+    {
+      "text": "{\"sense\": \"min\", \"variables\": [{\"name\": \"x_oats\", \"lb\": 0, \"ub\": 10, \"type\": \"continuous\"}, {\"name\": \"x_milk\", \"lb\": 0, ",
+      "mistake": "malformed JSON (truncated)",
+      "expect": "V1_PARSE"
+    },
+    {
+      "text": "{\"sense\": \"min\", \"variables\": [{\"name\": \"x_oats\", \"lb\": 0, \"ub\": 10, \"type\": \"continuous\"}, {\"name\": \"x_milk\", \"lb\": 0, \"ub\": 10, \"type\": \"continuous\"}, {\"name\": \"x_eggs\", \"lb\": 0, \"ub\": 10, \"type\": \"continuous\"}], \"objective\": {\"terms\": {\"x_oats\": 0.3, \"x_milk\": 0.25, \"x_eggs\": 0.5}, \"constant\": 0}, \"constraints\": [{\"name\": \"protein\", \"terms\": {\"x_oats\": 5, \"x_milk\": 8, \"x_eggs\": 13}, \"sense\": \">=\", \"rhs\": 60}, {\"name\": \"calories\", \"terms\": {\"x_oats\": 300, \"x_milk\": 150, \"x_eggs\": 80}, \"sense\": \">=\", \"rhs\": 1800}]}",
+      "mistake": null,
+      "expect": null
+    }
+  ],
+  "reports": [
+    {
+      "text": "{\"objective\": 2.345455, \"values\": {\"x_oats\": 3.272727, \"x_milk\": 5.454545, \"x_eggs\": 0.0}}",
+      "mistake": null,
+      "expect": null
+    }
+  ]
+}

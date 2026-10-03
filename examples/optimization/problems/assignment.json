@@ -1,0 +1,89 @@
+{
+  "id": "assignment",
+  "kind": "ILP",
+  "statement": "Assign three workers to three tasks, one task each and one worker per task. The cost of worker w1 doing tasks t1, t2, t3 is 9, 2, 7; for w2 it is 6, 4, 3; for w3 it is 5, 8, 1. Find the assignment with the lowest total cost.",
+  "data": {
+    "cost": {
+      "w1": {
+        "t1": 9,
+        "t2": 2,
+        "t3": 7
+      },
+      "w2": {
+        "t1": 6,
+        "t2": 4,
+        "t3": 3
+      },
+      "w3": {
+        "t1": 5,
+        "t2": 8,
+        "t3": 1
+      }
+    }
+  },
+  "variables": {
+    "x_w1_t1": "1 if w1 does t1",
+    "x_w1_t2": "1 if w1 does t2",
+    "x_w1_t3": "1 if w1 does t3",
+    "x_w2_t1": "1 if w2 does t1",
+    "x_w2_t2": "1 if w2 does t2",
+    "x_w2_t3": "1 if w2 does t3",
+    "x_w3_t1": "1 if w3 does t1",
+    "x_w3_t2": "1 if w3 does t2",
+    "x_w3_t3": "1 if w3 does t3"
+  },
+  "witnesses": [
+    {
+      "point": {
+        "x_w1_t1": 1,
+        "x_w1_t2": 0,
+        "x_w1_t3": 0,
+        "x_w2_t1": 0,
+        "x_w2_t2": 1,
+        "x_w2_t3": 0,
+        "x_w3_t1": 0,
+        "x_w3_t2": 0,
+        "x_w3_t3": 1
+      },
+      "feasible": true,
+      "note": "the diagonal assignment"
+    },
+    {
+      "point": {
+        "x_w1_t1": 0,
+        "x_w1_t2": 1,
+        "x_w1_t3": 0,
+        "x_w2_t1": 0,
+        "x_w2_t2": 1,
+        "x_w2_t3": 0,
+        "x_w3_t1": 0,
+        "x_w3_t2": 0,
+        "x_w3_t3": 1
+      },
+      "feasible": false,
+      "note": "t2 gets two workers"
+    },
+    {
+      "point": {
+        "x_w1_t1": 0,
+        "x_w1_t2": 0,
+        "x_w1_t3": 0,
+        "x_w2_t1": 0,
+        "x_w2_t2": 0,
+        "x_w2_t3": 0,
+        "x_w3_t1": 0,
+        "x_w3_t2": 0,
+        "x_w3_t3": 0
+      },
+      "feasible": false,
+      "note": "nobody works"
+    }
+  ],
+  "tolerances": {
+    "feasibility": 1e-06,
+    "integrality": 1e-06,
+    "objective_abs": 1e-06,
+    "objective_rel": 1e-06,
+    "report_abs": 0.0001
+  }
+}

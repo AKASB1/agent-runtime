@@ -1,0 +1,28 @@
+{
+  "problem": "assignment",
+  "note": "Scripted candidates stand in for a language model; the last candidate is correct and the earlier ones carry typical mistakes.",
+  "candidates": [
+    {
+      "text": "{\"sense\": \"min\", \"variables\": [{\"name\": \"x11\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}, {\"name\": \"x12\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}, {\"name\": \"x13\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}, {\"name\": \"x21\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}, {\"name\": \"x22\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}, {\"name\": \"x23\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}, {\"name\": \"x31\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}, {\"name\": \"x32\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}, {\"name\": \"x33\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}], \"objective\": {\"terms\": {\"x11\": 9, \"x12\": 2, \"x13\": 7, \"x21\": 6, \"x22\": 4, \"x23\": 3, \"x31\": 5, \"x32\": 8, \"x33\": 1}, \"constant\": 0}, \"constraints\": [{\"name\": \"worker_w1\", \"terms\": {\"x11\": 1, \"x12\": 1, \"x13\": 1}, \"sense\": \"==\", \"rhs\": 1}, {\"name\": \"worker_w2\", \"terms\": {\"x21\": 1, \"x22\": 1, \"x23\": 1}, \"sense\": \"==\", \"rhs\": 1}, {\"name\": \"worker_w3\", \"terms\": {\"x31\": 1, \"x32\": 1, \"x33\": 1}, \"sense\": \"==\", \"rhs\": 1}, {\"name\": \"task_t1\", \"terms\": {\"x11\": 1, \"x21\": 1, \"x31\": 1}, \"sense\": \"==\", \"rhs\": 1}, {\"name\": \"task_t2\", \"terms\": {\"x12\": 1, \"x22\": 1, \"x32\": 1}, \"sense\": \"==\", \"rhs\": 1}, {\"name\": \"task_t3\", \"terms\": {\"x13\": 1, \"x23\": 1, \"x33\": 1}, \"sense\": \"==\", \"rhs\": 1}]}",
+      "mistake": "renamed variables (x12 instead of the card's x_w1_t2)",
+      "expect": "V1_MISSING_CARD_VARIABLE"
+    },
+    {
+      "text": "{\"sense\": \"min\", \"variables\": [{\"name\": \"x_w1_t1\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}, {\"name\": \"x_w1_t2\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}, {\"name\": \"x_w1_t3\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}, {\"name\": \"x_w2_t1\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}, {\"name\": \"x_w2_t2\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}, {\"name\": \"x_w2_t3\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}, {\"name\": \"x_w3_t1\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}, {\"name\": \"x_w3_t2\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}, {\"name\": \"x_w3_t3\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}], \"objective\": {\"terms\": {\"x_w1_t1\": 9, \"x_w1_t2\": 2, \"x_w1_t3\": 7, \"x_w2_t1\": 6, \"x_w2_t2\": 4, \"x_w2_t3\": 3, \"x_w3_t1\": 5, \"x_w3_t2\": 8, \"x_w3_t3\": 1}, \"constant\": 0}, \"constraints\": [{\"name\": \"worker_w1\", \"terms\": {\"x_w1_t1\": 1, \"x_w1_t2\": 1, \"x_w1_t3\": 1}, \"sense\": \"==\", \"rhs\": 1}, {\"name\": \"worker_w2\", \"terms\": {\"x_w2_t1\": 1, \"x_w2_t2\": 1, \"x_w2_t3\": 1}, \"sense\": \"==\", \"rhs\": 1}, {\"name\": \"worker_w3\", \"terms\": {\"x_w3_t1\": 1, \"x_w3_t2\": 1, \"x_w3_t3\": 1}, \"sense\": \"==\", \"rhs\": 1}, {\"name\": \"task_t1\", \"terms\": {\"x_w1_t1\": 1, \"x_w2_t1\": 1, \"x_w3_t1\": 1}, \"sense\": \"==\", \"rhs\": 1}, {\"name\": \"task_t2\", \"terms\": {\"x_w1_t2\": 1, \"x_w2_t2\": 1, \"x_w3_t2\": 1}, \"sense\": \"==\", \"rhs\": 1}, {\"name\": \"task_t3\", \"terms\": {\"x_w1_t3\": 1, \"x_w2_t3\": 1, \"x_w3_t3\": 1}, \"sense\": \"==\", \"rhs\": 1}]}",
+      "mistake": null,
+      "expect": null
+    }
+  ],
+  "reports": [
+    {
+      "text": "{\"objective\": 9, \"values\": {\"x_w1_t1\": 0, \"x_w1_t2\": 0, \"x_w1_t3\": 0, \"x_w2_t1\": 1, \"x_w2_t2\": 0, \"x_w2_t3\": 0, \"x_w3_t1\": 0, \"x_w3_t2\": 0, \"x_w3_t3\": 1}}",
+      "mistake": "misreported value (x_w1_t2)",
+      "expect": "V5_REPORT_MISMATCH"
+    },
+    {
+      "text": "{\"objective\": 9.0, \"values\": {\"x_w1_t1\": 0.0, \"x_w1_t2\": 1.0, \"x_w1_t3\": 0.0, \"x_w2_t1\": 1.0, \"x_w2_t2\": -0.0, \"x_w2_t3\": 0.0, \"x_w3_t1\": -0.0, \"x_w3_t2\": 0.0, \"x_w3_t3\": 1.0}}",
+      "mistake": null,
+      "expect": null
+    }
+  ]
+}

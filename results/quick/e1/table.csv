@@ -1,0 +1,13 @@
+budget,config,router,B_ucu,cost_ucu,cost_ucu_ci,d_cost_vs_mix,d_cost_vs_mix_ci,d_success_vs_mix,d_success_vs_mix_ci,escalations,escalations_ci,latency_p95_ms,latency_p95_ms_ci,loss,n_seeds,over_budget,success,success_ci,tie,win
+,fixed_small,fixed_small,,1143.93,305.626,,,,,0,0,11246.9,3553.87,,3,,0.493333,0.0798539,,
+,fixed_medium,fixed_medium,,7211.57,863.16,,,,,0,0,20210,1931.46,,3,,0.69,0.187548,,
+,fixed_large,fixed_large,,31206.3,3522.93,,,,,0,0,32958.4,1270.49,,3,,0.8,0.0657241,,
+,oracle,oracle,,7845.17,2422.73,,,,,0,0,25576.4,8425.47,,3,,0.836667,0.112016,,
+B1,(none within B),cascade,2106,,,,,,,,,,,,,,,,,
+B1,(none within B),threshold,2106,,,,,,,,,,,,,,,,,
+B2,(none within B),cascade,4077,,,,,,,,,,,,,,,,,
+B2,(none within B),threshold,4077,,,,,,,,,,,,,,,,,
+B3,mix_0.00_1.00_0.00,random_mix,7895,7211.57,863.16,,,,,0,0,20123.4,1567.47,,3,0,0.69,0.187548,,
+B3,cascade_m-l,cascade,7895,8097.5,1602.88,885.933,758.35,0.0266667,0.0379458,0.03,0.0430265,22185.7,968.914,0,3,0,0.716667,0.149737,3,0
+B3,thr_2.5_3.0,threshold,7895,9319.19,5972.8,2107.62,5136.55,-0.143333,0.0940479,0,0,31192.6,4139.58,3,3,1,0.546667,0.114737,0,0
+B4,cascade_m-l,cascade,15288,8097.5,1602.88,,,,,0.03,0.0430265,22185.7,968.914,,3,0,0.716667,0.149737,,

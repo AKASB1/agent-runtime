@@ -1,0 +1,7 @@
+group,metric,configs,spread,max_se,separates
+small/r250,success,4,0,0.00830161,0
+small/r1500,success,4,0.1,0.0103226,1
+small/r3000,success,4,0.142,0.00942956,1
+medium/r250,success,4,0,0.01206,0
+medium/r1500,success,4,0.002,0.0120185,0
+medium/r3000,success,4,0.0365,0.0115722,1

@@ -1,0 +1,286 @@
+all_witnesses_accepted,all_witnesses_code,k,no_witnesses_accepted,no_witnesses_code,operator,problem,truth,two_witnesses_accepted,two_witnesses_code,wrong
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,0,1,,drop_constraint,product_mix,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,1,1,,drop_constraint,product_mix,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,2,1,,drop_constraint,product_mix,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,3,1,,drop_constraint,product_mix,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,4,1,,drop_constraint,product_mix,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_FEASIBLE_WITNESS_REJECTED,0,1,,reverse_inequality,product_mix,the mutant's optimum is infeasible for the reference,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,1,1,,reverse_inequality,product_mix,the mutant's optimum is infeasible for the reference,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,2,1,,reverse_inequality,product_mix,the mutant's optimum is infeasible for the reference,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,3,1,,reverse_inequality,product_mix,the mutant's optimum is infeasible for the reference,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,4,1,,reverse_inequality,product_mix,the mutant's optimum is infeasible for the reference,0,V4_FEASIBLE_WITNESS_REJECTED,1
+1,,0,1,,scale_coef_10,product_mix,objective 16000 != reference 1800,1,,1
+1,,1,1,,scale_coef_10,product_mix,objective 12400 != reference 1800,1,,1
+0,V4_FEASIBLE_WITNESS_REJECTED,2,1,,scale_coef_10,product_mix,objective 1600 != reference 1800,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,3,1,,scale_coef_10,product_mix,objective 1280 != reference 1800,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,4,1,,scale_coef_10,product_mix,objective 1240 != reference 1800,0,V4_FEASIBLE_WITNESS_REJECTED,1
+1,,0,1,,scale_coef_0.1,product_mix,the mutant's optimum is infeasible for the reference,1,,1
+1,,1,1,,scale_coef_0.1,product_mix,objective 1240 != reference 1800,1,,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,2,1,,scale_coef_0.1,product_mix,the mutant's optimum is infeasible for the reference,1,,1
+1,,3,1,,scale_coef_0.1,product_mix,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,4,1,,scale_coef_0.1,product_mix,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,0,1,,change_rhs,product_mix,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_FEASIBLE_WITNESS_REJECTED,1,1,,change_rhs,product_mix,objective 982.862 != reference 1800,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,2,1,,change_rhs,product_mix,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_FEASIBLE_WITNESS_REJECTED,3,1,,change_rhs,product_mix,objective 640.459 != reference 1800,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,4,1,,change_rhs,product_mix,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_FEASIBLE_WITNESS_REJECTED,0,1,,change_bound,product_mix,objective 1369.54 != reference 1800,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,1,1,,change_bound,product_mix,objective 1695.2 != reference 1800,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,2,1,,change_bound,product_mix,equivalent at the optimum,1,,0
+0,V4_FEASIBLE_WITNESS_REJECTED,3,1,,change_bound,product_mix,objective 1623.08 != reference 1800,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,4,1,,change_bound,product_mix,objective 1658.25 != reference 1800,0,V4_FEASIBLE_WITNESS_REJECTED,1
+1,,0,1,,swap_sense,product_mix,objective 0 != reference 1800,1,,1
+1,,1,1,,swap_sense,product_mix,objective 0 != reference 1800,1,,1
+1,,2,1,,swap_sense,product_mix,objective 0 != reference 1800,1,,1
+1,,3,1,,swap_sense,product_mix,objective 0 != reference 1800,1,,1
+1,,4,1,,swap_sense,product_mix,objective 0 != reference 1800,1,,1
+0,V1_MISSING_CARD_VARIABLE,0,0,V1_MISSING_CARD_VARIABLE,rename_variable,product_mix,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,1,0,V1_MISSING_CARD_VARIABLE,rename_variable,product_mix,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,2,0,V1_MISSING_CARD_VARIABLE,rename_variable,product_mix,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,3,0,V1_MISSING_CARD_VARIABLE,rename_variable,product_mix,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,4,0,V1_MISSING_CARD_VARIABLE,rename_variable,product_mix,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+1,,0,1,,add_constraint,product_mix,equivalent at the optimum,1,,0
+0,V4_FEASIBLE_WITNESS_REJECTED,1,1,,add_constraint,product_mix,objective 1732.63 != reference 1800,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,2,1,,add_constraint,product_mix,objective 1791.2 != reference 1800,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,3,1,,add_constraint,product_mix,objective 1726.51 != reference 1800,0,V4_FEASIBLE_WITNESS_REJECTED,1
+1,,4,1,,add_constraint,product_mix,equivalent at the optimum,1,,0
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,0,1,,drop_constraint,diet,the mutant's optimum is infeasible for the reference,0,V4_INFEASIBLE_WITNESS_ACCEPTED,1
+1,,1,1,,drop_constraint,diet,the mutant's optimum is infeasible for the reference,1,,1
+1,,2,1,,drop_constraint,diet,the mutant's optimum is infeasible for the reference,1,,1
+1,,3,1,,drop_constraint,diet,the mutant's optimum is infeasible for the reference,1,,1
+1,,4,1,,drop_constraint,diet,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_FEASIBLE_WITNESS_REJECTED,0,1,,reverse_inequality,diet,the mutant's optimum is infeasible for the reference,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,1,1,,reverse_inequality,diet,the mutant's optimum is infeasible for the reference,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,2,1,,reverse_inequality,diet,the mutant's optimum is infeasible for the reference,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,3,1,,reverse_inequality,diet,the mutant's optimum is infeasible for the reference,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,4,1,,reverse_inequality,diet,the mutant's optimum is infeasible for the reference,0,V4_FEASIBLE_WITNESS_REJECTED,1
+1,,0,1,,scale_coef_10,diet,objective 4.375 != reference 2.34545,1,,1
+1,,1,1,,scale_coef_10,diet,the mutant's optimum is infeasible for the reference,1,,1
+1,,2,1,,scale_coef_10,diet,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,3,1,,scale_coef_10,diet,the mutant's optimum is infeasible for the reference,0,V4_INFEASIBLE_WITNESS_ACCEPTED,1
+1,,4,1,,scale_coef_10,diet,equivalent at the optimum,1,,0
+1,,0,1,,scale_coef_0.1,diet,objective 2.88 != reference 2.34545,1,,1
+1,,1,1,,scale_coef_0.1,diet,objective 0.55 != reference 2.34545,1,,1
+1,,2,1,,scale_coef_0.1,diet,objective 2.70968 != reference 2.34545,1,,1
+1,,3,1,,scale_coef_0.1,diet,equivalent at the optimum,1,,0
+1,,4,1,,scale_coef_0.1,diet,objective 2.88 != reference 2.34545,1,,1
+1,,0,1,,change_rhs,diet,objective 4.03016 != reference 2.34545,1,,1
+1,,1,1,,change_rhs,diet,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,2,1,,change_rhs,diet,the mutant's optimum is infeasible for the reference,0,V4_INFEASIBLE_WITNESS_ACCEPTED,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,3,1,,change_rhs,diet,the mutant's optimum is infeasible for the reference,0,V4_INFEASIBLE_WITNESS_ACCEPTED,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,4,1,,change_rhs,diet,the mutant's optimum is infeasible for the reference,0,V4_INFEASIBLE_WITNESS_ACCEPTED,1
+1,,0,1,,change_bound,diet,equivalent at the optimum,1,,0
+1,,1,1,,change_bound,diet,equivalent at the optimum,1,,0
+1,,2,1,,change_bound,diet,equivalent at the optimum,1,,0
+1,,3,1,,change_bound,diet,equivalent at the optimum,1,,0
+0,V4_FEASIBLE_WITNESS_REJECTED,4,1,,change_bound,diet,equivalent at the optimum,0,V4_FEASIBLE_WITNESS_REJECTED,0
+1,,0,1,,swap_sense,diet,objective 10.5 != reference 2.34545,1,,1
+1,,1,1,,swap_sense,diet,objective 10.5 != reference 2.34545,1,,1
+1,,2,1,,swap_sense,diet,objective 10.5 != reference 2.34545,1,,1
+1,,3,1,,swap_sense,diet,objective 10.5 != reference 2.34545,1,,1
+1,,4,1,,swap_sense,diet,objective 10.5 != reference 2.34545,1,,1
+0,V1_MISSING_CARD_VARIABLE,0,0,V1_MISSING_CARD_VARIABLE,rename_variable,diet,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,1,0,V1_MISSING_CARD_VARIABLE,rename_variable,diet,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,2,0,V1_MISSING_CARD_VARIABLE,rename_variable,diet,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,3,0,V1_MISSING_CARD_VARIABLE,rename_variable,diet,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,4,0,V1_MISSING_CARD_VARIABLE,rename_variable,diet,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V4_FEASIBLE_WITNESS_REJECTED,0,1,,add_constraint,diet,equivalent at the optimum,0,V4_FEASIBLE_WITNESS_REJECTED,0
+0,V4_FEASIBLE_WITNESS_REJECTED,1,1,,add_constraint,diet,equivalent at the optimum,0,V4_FEASIBLE_WITNESS_REJECTED,0
+0,V4_FEASIBLE_WITNESS_REJECTED,2,1,,add_constraint,diet,equivalent at the optimum,0,V4_FEASIBLE_WITNESS_REJECTED,0
+0,V4_FEASIBLE_WITNESS_REJECTED,3,1,,add_constraint,diet,equivalent at the optimum,0,V4_FEASIBLE_WITNESS_REJECTED,0
+0,V4_FEASIBLE_WITNESS_REJECTED,4,1,,add_constraint,diet,equivalent at the optimum,0,V4_FEASIBLE_WITNESS_REJECTED,0
+1,,0,1,,drop_constraint,transportation,the mutant's optimum is infeasible for the reference,1,,1
+1,,1,1,,drop_constraint,transportation,the mutant's optimum is infeasible for the reference,1,,1
+1,,2,1,,drop_constraint,transportation,the mutant's optimum is infeasible for the reference,1,,1
+1,,3,1,,drop_constraint,transportation,the mutant's optimum is infeasible for the reference,1,,1
+1,,4,1,,drop_constraint,transportation,the mutant's optimum is infeasible for the reference,1,,1
+1,,0,1,,reverse_inequality,transportation,the mutant's optimum is infeasible for the reference,1,,1
+1,,1,1,,reverse_inequality,transportation,the mutant's optimum is infeasible for the reference,1,,1
+1,,2,1,,reverse_inequality,transportation,the mutant's optimum is infeasible for the reference,1,,1
+1,,3,1,,reverse_inequality,transportation,the mutant's optimum is infeasible for the reference,1,,1
+1,,4,1,,reverse_inequality,transportation,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_FEASIBLE_WITNESS_REJECTED,0,1,,scale_coef_10,transportation,objective 420 != reference 350,0,V4_FEASIBLE_WITNESS_REJECTED,1
+1,,1,1,,scale_coef_10,transportation,objective 420 != reference 350,1,,1
+0,V4_FEASIBLE_WITNESS_REJECTED,2,1,,scale_coef_10,transportation,objective 415 != reference 350,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,3,1,,scale_coef_10,transportation,objective 360 != reference 350,0,V4_FEASIBLE_WITNESS_REJECTED,1
+1,,4,1,,scale_coef_10,transportation,objective 420 != reference 350,1,,1
+1,,0,1,,scale_coef_0.1,transportation,objective 202.5 != reference 350,1,,1
+1,,1,1,,scale_coef_0.1,transportation,objective 278 != reference 350,1,,1
+0,V4_FEASIBLE_WITNESS_REJECTED,2,1,,scale_coef_0.1,transportation,objective 415 != reference 350,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,3,1,,scale_coef_0.1,transportation,objective 395 != reference 350,0,V4_FEASIBLE_WITNESS_REJECTED,1
+1,,4,1,,scale_coef_0.1,transportation,objective 285 != reference 350,1,,1
+1,,0,1,,change_rhs,transportation,the mutant's optimum is infeasible for the reference,1,,1
+1,,1,1,,change_rhs,transportation,the mutant's optimum is infeasible for the reference,1,,1
+1,,2,1,,change_rhs,transportation,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,3,1,,change_rhs,transportation,equivalent at the optimum,1,,0
+0,V2_INFEASIBLE,4,0,V2_INFEASIBLE,change_rhs,transportation,mutant infeasible,0,V2_INFEASIBLE,1
+1,,0,1,,change_bound,transportation,equivalent at the optimum,1,,0
+1,,1,1,,change_bound,transportation,equivalent at the optimum,1,,0
+1,,2,1,,change_bound,transportation,equivalent at the optimum,1,,0
+0,V4_FEASIBLE_WITNESS_REJECTED,3,1,,change_bound,transportation,objective 354.795 != reference 350,0,V4_FEASIBLE_WITNESS_REJECTED,1
+1,,4,1,,change_bound,transportation,equivalent at the optimum,1,,0
+1,,0,1,,swap_sense,transportation,objective 435 != reference 350,1,,1
+1,,1,1,,swap_sense,transportation,objective 435 != reference 350,1,,1
+1,,2,1,,swap_sense,transportation,objective 435 != reference 350,1,,1
+1,,3,1,,swap_sense,transportation,objective 435 != reference 350,1,,1
+1,,4,1,,swap_sense,transportation,objective 435 != reference 350,1,,1
+0,V1_MISSING_CARD_VARIABLE,0,0,V1_MISSING_CARD_VARIABLE,rename_variable,transportation,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,1,0,V1_MISSING_CARD_VARIABLE,rename_variable,transportation,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,2,0,V1_MISSING_CARD_VARIABLE,rename_variable,transportation,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,3,0,V1_MISSING_CARD_VARIABLE,rename_variable,transportation,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,4,0,V1_MISSING_CARD_VARIABLE,rename_variable,transportation,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+1,,0,1,,add_constraint,transportation,equivalent at the optimum,1,,0
+1,,1,1,,add_constraint,transportation,equivalent at the optimum,1,,0
+1,,2,1,,add_constraint,transportation,equivalent at the optimum,1,,0
+0,V4_FEASIBLE_WITNESS_REJECTED,3,1,,add_constraint,transportation,objective 354.329 != reference 350,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,4,1,,add_constraint,transportation,objective 354.876 != reference 350,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,0,1,,drop_constraint,knapsack,the mutant's optimum is infeasible for the reference,0,V4_INFEASIBLE_WITNESS_ACCEPTED,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,1,1,,drop_constraint,knapsack,the mutant's optimum is infeasible for the reference,0,V4_INFEASIBLE_WITNESS_ACCEPTED,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,2,1,,drop_constraint,knapsack,the mutant's optimum is infeasible for the reference,0,V4_INFEASIBLE_WITNESS_ACCEPTED,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,3,1,,drop_constraint,knapsack,the mutant's optimum is infeasible for the reference,0,V4_INFEASIBLE_WITNESS_ACCEPTED,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,4,1,,drop_constraint,knapsack,the mutant's optimum is infeasible for the reference,0,V4_INFEASIBLE_WITNESS_ACCEPTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,0,1,,reverse_inequality,knapsack,the mutant's optimum is infeasible for the reference,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,1,1,,reverse_inequality,knapsack,the mutant's optimum is infeasible for the reference,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,2,1,,reverse_inequality,knapsack,the mutant's optimum is infeasible for the reference,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,3,1,,reverse_inequality,knapsack,the mutant's optimum is infeasible for the reference,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,4,1,,reverse_inequality,knapsack,the mutant's optimum is infeasible for the reference,0,V4_FEASIBLE_WITNESS_REJECTED,1
+1,,0,1,,scale_coef_10,knapsack,objective 137 != reference 29,1,,1
+1,,1,1,,scale_coef_10,knapsack,objective 119 != reference 29,1,,1
+1,,2,1,,scale_coef_10,knapsack,objective 145 != reference 29,1,,1
+0,V4_FEASIBLE_WITNESS_REJECTED,3,1,,scale_coef_10,knapsack,objective 28 != reference 29,0,V4_FEASIBLE_WITNESS_REJECTED,1
+1,,4,1,,scale_coef_10,knapsack,objective 28 != reference 29,1,,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,0,1,,scale_coef_0.1,knapsack,the mutant's optimum is infeasible for the reference,0,V4_INFEASIBLE_WITNESS_ACCEPTED,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,1,1,,scale_coef_0.1,knapsack,the mutant's optimum is infeasible for the reference,0,V4_INFEASIBLE_WITNESS_ACCEPTED,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,2,1,,scale_coef_0.1,knapsack,the mutant's optimum is infeasible for the reference,0,V4_INFEASIBLE_WITNESS_ACCEPTED,1
+1,,3,1,,scale_coef_0.1,knapsack,objective 28 != reference 29,1,,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,4,1,,scale_coef_0.1,knapsack,the mutant's optimum is infeasible for the reference,0,V4_INFEASIBLE_WITNESS_ACCEPTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,0,1,,change_rhs,knapsack,objective 12 != reference 29,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,1,1,,change_rhs,knapsack,the mutant's optimum is infeasible for the reference,0,V4_INFEASIBLE_WITNESS_ACCEPTED,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,2,1,,change_rhs,knapsack,the mutant's optimum is infeasible for the reference,0,V4_INFEASIBLE_WITNESS_ACCEPTED,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,3,1,,change_rhs,knapsack,the mutant's optimum is infeasible for the reference,0,V4_INFEASIBLE_WITNESS_ACCEPTED,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,4,1,,change_rhs,knapsack,the mutant's optimum is infeasible for the reference,0,V4_INFEASIBLE_WITNESS_ACCEPTED,1
+1,,0,1,,change_bound,knapsack,equivalent at the optimum,1,,0
+1,,1,1,,change_bound,knapsack,equivalent at the optimum,1,,0
+1,,2,1,,change_bound,knapsack,equivalent at the optimum,1,,0
+1,,3,1,,change_bound,knapsack,equivalent at the optimum,1,,0
+1,,4,1,,change_bound,knapsack,equivalent at the optimum,1,,0
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,0,1,,drop_integrality,knapsack,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,1,1,,drop_integrality,knapsack,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,2,1,,drop_integrality,knapsack,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,3,1,,drop_integrality,knapsack,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,4,1,,drop_integrality,knapsack,the mutant's optimum is infeasible for the reference,1,,1
+1,,0,1,,swap_sense,knapsack,objective 0 != reference 29,1,,1
+1,,1,1,,swap_sense,knapsack,objective 0 != reference 29,1,,1
+1,,2,1,,swap_sense,knapsack,objective 0 != reference 29,1,,1
+1,,3,1,,swap_sense,knapsack,objective 0 != reference 29,1,,1
+1,,4,1,,swap_sense,knapsack,objective 0 != reference 29,1,,1
+0,V1_MISSING_CARD_VARIABLE,0,0,V1_MISSING_CARD_VARIABLE,rename_variable,knapsack,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,1,0,V1_MISSING_CARD_VARIABLE,rename_variable,knapsack,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,2,0,V1_MISSING_CARD_VARIABLE,rename_variable,knapsack,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,3,0,V1_MISSING_CARD_VARIABLE,rename_variable,knapsack,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,4,0,V1_MISSING_CARD_VARIABLE,rename_variable,knapsack,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V4_FEASIBLE_WITNESS_REJECTED,0,1,,add_constraint,knapsack,equivalent at the optimum,0,V4_FEASIBLE_WITNESS_REJECTED,0
+0,V4_FEASIBLE_WITNESS_REJECTED,1,1,,add_constraint,knapsack,objective 28 != reference 29,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,2,1,,add_constraint,knapsack,equivalent at the optimum,0,V4_FEASIBLE_WITNESS_REJECTED,0
+1,,3,1,,add_constraint,knapsack,equivalent at the optimum,1,,0
+1,,4,1,,add_constraint,knapsack,objective 28 != reference 29,1,,1
+1,,0,1,,drop_constraint,facility,equivalent at the optimum,1,,0
+1,,1,1,,drop_constraint,facility,the mutant's optimum is infeasible for the reference,1,,1
+1,,2,1,,drop_constraint,facility,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,3,1,,drop_constraint,facility,the mutant's optimum is infeasible for the reference,1,,1
+1,,4,1,,drop_constraint,facility,equivalent at the optimum,1,,0
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,0,1,,reverse_inequality,facility,the mutant's optimum is infeasible for the reference,1,,1
+1,,1,1,,reverse_inequality,facility,the mutant's optimum is infeasible for the reference,1,,1
+1,,2,1,,reverse_inequality,facility,the mutant's optimum is infeasible for the reference,1,,1
+1,,3,1,,reverse_inequality,facility,objective 285 != reference 275,1,,1
+1,,4,1,,reverse_inequality,facility,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_FEASIBLE_WITNESS_REJECTED,0,1,,scale_coef_10,facility,equivalent at the optimum,0,V4_FEASIBLE_WITNESS_REJECTED,0
+1,,1,1,,scale_coef_10,facility,the mutant's optimum is infeasible for the reference,1,,1
+1,,2,1,,scale_coef_10,facility,objective 285 != reference 275,1,,1
+1,,3,1,,scale_coef_10,facility,equivalent at the optimum,1,,0
+1,,4,1,,scale_coef_10,facility,objective 315 != reference 275,1,,1
+1,,0,1,,scale_coef_0.1,facility,objective 261.5 != reference 275,1,,1
+1,,1,1,,scale_coef_0.1,facility,objective 258 != reference 275,1,,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,2,1,,scale_coef_0.1,facility,the mutant's optimum is infeasible for the reference,0,V4_INFEASIBLE_WITNESS_ACCEPTED,1
+1,,3,1,,scale_coef_0.1,facility,objective 285 != reference 275,1,,1
+1,,4,1,,scale_coef_0.1,facility,objective 285 != reference 275,1,,1
+1,,0,1,,change_rhs,facility,the mutant's optimum is infeasible for the reference,1,,1
+0,V4_INFEASIBLE_WITNESS_ACCEPTED,1,1,,change_rhs,facility,the mutant's optimum is infeasible for the reference,0,V4_INFEASIBLE_WITNESS_ACCEPTED,1
+1,,2,1,,change_rhs,facility,equivalent at the optimum,1,,0
+0,V2_INFEASIBLE,3,0,V2_INFEASIBLE,change_rhs,facility,mutant infeasible,0,V2_INFEASIBLE,1
+1,,4,1,,change_rhs,facility,equivalent at the optimum,1,,0
+1,,0,1,,change_bound,facility,equivalent at the optimum,1,,0
+0,V4_FEASIBLE_WITNESS_REJECTED,1,1,,change_bound,facility,objective 279.578 != reference 275,0,V4_FEASIBLE_WITNESS_REJECTED,1
+1,,2,1,,change_bound,facility,equivalent at the optimum,1,,0
+1,,3,1,,change_bound,facility,equivalent at the optimum,1,,0
+1,,4,1,,change_bound,facility,equivalent at the optimum,1,,0
+1,,0,1,,drop_integrality,facility,the mutant's optimum is infeasible for the reference,1,,1
+1,,1,1,,drop_integrality,facility,the mutant's optimum is infeasible for the reference,1,,1
+1,,2,1,,drop_integrality,facility,the mutant's optimum is infeasible for the reference,1,,1
+1,,3,1,,drop_integrality,facility,the mutant's optimum is infeasible for the reference,1,,1
+1,,4,1,,drop_integrality,facility,the mutant's optimum is infeasible for the reference,1,,1
+1,,0,1,,swap_sense,facility,objective 470 != reference 275,1,,1
+1,,1,1,,swap_sense,facility,objective 470 != reference 275,1,,1
+1,,2,1,,swap_sense,facility,objective 470 != reference 275,1,,1
+1,,3,1,,swap_sense,facility,objective 470 != reference 275,1,,1
+1,,4,1,,swap_sense,facility,objective 470 != reference 275,1,,1
+0,V1_MISSING_CARD_VARIABLE,0,0,V1_MISSING_CARD_VARIABLE,rename_variable,facility,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,1,0,V1_MISSING_CARD_VARIABLE,rename_variable,facility,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,2,0,V1_MISSING_CARD_VARIABLE,rename_variable,facility,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,3,0,V1_MISSING_CARD_VARIABLE,rename_variable,facility,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,4,0,V1_MISSING_CARD_VARIABLE,rename_variable,facility,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+1,,0,1,,add_constraint,facility,objective 285 != reference 275,1,,1
+1,,1,1,,add_constraint,facility,equivalent at the optimum,1,,0
+1,,2,1,,add_constraint,facility,equivalent at the optimum,1,,0
+0,V4_FEASIBLE_WITNESS_REJECTED,3,1,,add_constraint,facility,equivalent at the optimum,0,V4_FEASIBLE_WITNESS_REJECTED,0
+1,,4,1,,add_constraint,facility,equivalent at the optimum,1,,0
+1,,0,1,,drop_constraint,assignment,equivalent at the optimum,1,,0
+1,,1,1,,drop_constraint,assignment,equivalent at the optimum,1,,0
+1,,2,1,,drop_constraint,assignment,equivalent at the optimum,1,,0
+1,,3,1,,drop_constraint,assignment,equivalent at the optimum,1,,0
+1,,4,1,,drop_constraint,assignment,equivalent at the optimum,1,,0
+1,,0,1,,reverse_inequality,assignment,equivalent at the optimum,1,,0
+1,,1,1,,reverse_inequality,assignment,equivalent at the optimum,1,,0
+1,,2,1,,reverse_inequality,assignment,equivalent at the optimum,1,,0
+1,,3,1,,reverse_inequality,assignment,equivalent at the optimum,1,,0
+1,,4,1,,reverse_inequality,assignment,equivalent at the optimum,1,,0
+1,,0,1,,scale_coef_10,assignment,objective 14 != reference 9,1,,1
+1,,1,1,,scale_coef_10,assignment,equivalent at the optimum,1,,0
+1,,2,1,,scale_coef_10,assignment,equivalent at the optimum,1,,0
+1,,3,1,,scale_coef_10,assignment,equivalent at the optimum,1,,0
+0,V4_FEASIBLE_WITNESS_REJECTED,4,1,,scale_coef_10,assignment,objective 10 != reference 9,0,V4_FEASIBLE_WITNESS_REJECTED,1
+0,V4_FEASIBLE_WITNESS_REJECTED,0,1,,scale_coef_0.1,assignment,equivalent at the optimum,0,V4_FEASIBLE_WITNESS_REJECTED,0
+0,V4_FEASIBLE_WITNESS_REJECTED,1,1,,scale_coef_0.1,assignment,equivalent at the optimum,0,V4_FEASIBLE_WITNESS_REJECTED,0
+1,,2,1,,scale_coef_0.1,assignment,objective 14 != reference 9,1,,1
+1,,3,1,,scale_coef_0.1,assignment,equivalent at the optimum,1,,0
+1,,4,1,,scale_coef_0.1,assignment,equivalent at the optimum,1,,0
+0,V2_INFEASIBLE,0,0,V2_INFEASIBLE,change_rhs,assignment,mutant infeasible,0,V2_INFEASIBLE,1
+0,V2_INFEASIBLE,1,0,V2_INFEASIBLE,change_rhs,assignment,mutant infeasible,0,V2_INFEASIBLE,1
+0,V2_INFEASIBLE,2,0,V2_INFEASIBLE,change_rhs,assignment,mutant infeasible,0,V2_INFEASIBLE,1
+0,V2_INFEASIBLE,3,0,V2_INFEASIBLE,change_rhs,assignment,mutant infeasible,0,V2_INFEASIBLE,1
+0,V2_INFEASIBLE,4,0,V2_INFEASIBLE,change_rhs,assignment,mutant infeasible,0,V2_INFEASIBLE,1
+1,,0,1,,change_bound,assignment,equivalent at the optimum,1,,0
+1,,1,1,,change_bound,assignment,equivalent at the optimum,1,,0
+1,,2,1,,change_bound,assignment,equivalent at the optimum,1,,0
+1,,3,1,,change_bound,assignment,equivalent at the optimum,1,,0
+1,,4,1,,change_bound,assignment,equivalent at the optimum,1,,0
+1,,0,1,,drop_integrality,assignment,equivalent at the optimum,1,,0
+1,,1,1,,drop_integrality,assignment,equivalent at the optimum,1,,0
+1,,2,1,,drop_integrality,assignment,equivalent at the optimum,1,,0
+1,,3,1,,drop_integrality,assignment,equivalent at the optimum,1,,0
+1,,4,1,,drop_integrality,assignment,equivalent at the optimum,1,,0
+1,,0,1,,swap_sense,assignment,objective 21 != reference 9,1,,1
+1,,1,1,,swap_sense,assignment,objective 21 != reference 9,1,,1
+1,,2,1,,swap_sense,assignment,objective 21 != reference 9,1,,1
+1,,3,1,,swap_sense,assignment,objective 21 != reference 9,1,,1
+1,,4,1,,swap_sense,assignment,objective 21 != reference 9,1,,1
+0,V1_MISSING_CARD_VARIABLE,0,0,V1_MISSING_CARD_VARIABLE,rename_variable,assignment,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,1,0,V1_MISSING_CARD_VARIABLE,rename_variable,assignment,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,2,0,V1_MISSING_CARD_VARIABLE,rename_variable,assignment,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,3,0,V1_MISSING_CARD_VARIABLE,rename_variable,assignment,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+0,V1_MISSING_CARD_VARIABLE,4,0,V1_MISSING_CARD_VARIABLE,rename_variable,assignment,a card variable is renamed,0,V1_MISSING_CARD_VARIABLE,1
+1,,0,1,,add_constraint,assignment,equivalent at the optimum,1,,0
+1,,1,1,,add_constraint,assignment,objective 14 != reference 9,1,,1
+0,V4_FEASIBLE_WITNESS_REJECTED,2,1,,add_constraint,assignment,objective 10 != reference 9,0,V4_FEASIBLE_WITNESS_REJECTED,1
+1,,3,1,,add_constraint,assignment,equivalent at the optimum,1,,0
+0,V4_FEASIBLE_WITNESS_REJECTED,4,1,,add_constraint,assignment,equivalent at the optimum,0,V4_FEASIBLE_WITNESS_REJECTED,0

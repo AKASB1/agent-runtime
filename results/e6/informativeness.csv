@@ -1,0 +1,3 @@
+group,metric,configs,spread,max_se,separates
+e6,success,4,0.468,0.0128496,1
+e6 makespan,latency_p50_ms,4,3014.3,1540.93,1

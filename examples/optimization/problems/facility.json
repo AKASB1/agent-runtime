@@ -1,0 +1,95 @@
+{
+  "id": "facility",
+  "kind": "MILP",
+  "statement": "Two depots can be opened to serve three customers. Opening depot f1 costs 100 and gives 100 units of capacity; opening f2 costs 70 and gives 50 units. Customers c1, c2, and c3 need 20, 15, and 25 units. A unit costs 2, 3, 4 to ship from f1 and 3, 1, 2 from f2. Only open depots can ship. Which depots should open and how should they ship to minimise the total cost?",
+  "data": {
+    "depots": {
+      "f1": {
+        "fixed": 100,
+        "cap": 100
+      },
+      "f2": {
+        "fixed": 70,
+        "cap": 50
+      }
+    },
+    "demand": {
+      "c1": 20,
+      "c2": 15,
+      "c3": 25
+    },
+    "cost": {
+      "f1": {
+        "c1": 2,
+        "c2": 3,
+        "c3": 4
+      },
+      "f2": {
+        "c1": 3,
+        "c2": 1,
+        "c3": 2
+      }
+    }
+  },
+  "variables": {
+    "y_f1": "1 if depot f1 opens",
+    "y_f2": "1 if depot f2 opens",
+    "x_f1_c1": "units from f1 to c1",
+    "x_f1_c2": "units from f1 to c2",
+    "x_f1_c3": "units from f1 to c3",
+    "x_f2_c1": "units from f2 to c1",
+    "x_f2_c2": "units from f2 to c2",
+    "x_f2_c3": "units from f2 to c3"
+  },
+  "witnesses": [
+    {
+      "point": {
+        "y_f1": 1,
+        "y_f2": 0,
+        "x_f1_c1": 20,
+        "x_f1_c2": 15,
+        "x_f1_c3": 25,
+        "x_f2_c1": 0,
+        "x_f2_c2": 0,
+        "x_f2_c3": 0
+      },
+      "feasible": true,
+      "note": "only f1 open, it serves everyone"
+    },
+    {
+      "point": {
+        "y_f1": 0,
+        "y_f2": 1,
+        "x_f1_c1": 0,
+        "x_f1_c2": 0,
+        "x_f1_c3": 0,
+        "x_f2_c1": 20,
+        "x_f2_c2": 15,
+        "x_f2_c3": 25
+      },
+      "feasible": false,
+      "note": "f2 ships 60 units with 50 of capacity"
+    },
+    {
+      "point": {
+        "y_f1": 0,
+        "y_f2": 1,
+        "x_f1_c1": 20,
+        "x_f1_c2": 0,
+        "x_f1_c3": 0,
+        "x_f2_c1": 0,
+        "x_f2_c2": 15,
+        "x_f2_c3": 25
+      },
+      "feasible": false,
+      "note": "the closed depot f1 ships"
+    }
+  ],
+  "tolerances": {
+    "feasibility": 1e-06,
+    "integrality": 1e-06,
+    "objective_abs": 1e-06,
+    "objective_rel": 1e-06,
+    "report_abs": 0.0001
+  }
+}

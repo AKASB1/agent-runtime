@@ -1,0 +1,71 @@
+{
+  "id": "knapsack",
+  "formulation": {
+    "sense": "max",
+    "variables": [
+      {
+        "name": "x_1",
+        "lb": 0,
+        "ub": 1,
+        "type": "binary"
+      },
+      {
+        "name": "x_2",
+        "lb": 0,
+        "ub": 1,
+        "type": "binary"
+      },
+      {
+        "name": "x_3",
+        "lb": 0,
+        "ub": 1,
+        "type": "binary"
+      },
+      {
+        "name": "x_4",
+        "lb": 0,
+        "ub": 1,
+        "type": "binary"
+      },
+      {
+        "name": "x_5",
+        "lb": 0,
+        "ub": 1,
+        "type": "binary"
+      },
+      {
+        "name": "x_6",
+        "lb": 0,
+        "ub": 1,
+        "type": "binary"
+      }
+    ],
+    "objective": {
+      "terms": {
+        "x_1": 10,
+        "x_2": 7,
+        "x_3": 12,
+        "x_4": 5,
+        "x_5": 13,
+        "x_6": 3
+      },
+      "constant": 0
+    },
+    "constraints": [
+      {
+        "name": "capacity",
+        "terms": {
+          "x_1": 5,
+          "x_2": 4,
+          "x_3": 6,
+          "x_4": 3,
+          "x_5": 7,
+          "x_6": 2
+        },
+        "sense": "<=",
+        "rhs": 15
+      }
+    ]
+  },
+  "objective": 29.0
+}

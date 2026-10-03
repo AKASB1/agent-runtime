@@ -1,0 +1,17 @@
+budget,config,router,B_ucu,cost_ucu,cost_ucu_ci,d_cost_vs_mix,d_cost_vs_mix_ci,d_success_vs_mix,d_success_vs_mix_ci,escalations,escalations_ci,latency_p95_ms,latency_p95_ms_ci,loss,n_seeds,over_budget,success,success_ci,tie,win
+,fixed_small,fixed_small,,1829.26,25.1243,,,,,0,0,12413.2,267.043,,10,,0.197667,0.0167125,,
+,fixed_medium,fixed_medium,,11914.5,251.369,,,,,0,0,23042,729.801,,10,,0.410667,0.0151563,,
+,fixed_large,fixed_large,,47665.6,649.501,,,,,0,0,33751.1,218.51,,10,,0.589,0.0116302,,
+,oracle,oracle,,13989.4,677.66,,,,,0,0,31269.2,537.451,,10,,0.639,0.0127695,,
+B1,(none within B),random_mix,2106,,,,,,,,,,,,,,,,,
+B1,(none within B),cascade,2106,,,,,,,,,,,,,,,,,
+B1,(none within B),threshold,2106,,,,,,,,,,,,,,,,,
+B2,(none within B),random_mix,4077,,,,,,,,,,,,,,,,,
+B2,(none within B),cascade,4077,,,,,,,,,,,,,,,,,
+B2,(none within B),threshold,4077,,,,,,,,,,,,,,,,,
+B3,mix_0.50_0.50_0.00,random_mix,7895,6916.55,258.002,,,,,0,0,20864.3,513.447,,10,0,0.306,0.0123546,,
+B3,cascade_s-m-l,cascade,7895,7471.91,279.596,555.361,232.462,0.0206667,0.0119385,0.426333,0.0171011,29642.5,514.237,3,10,0,0.326667,0.0159365,6,1
+B3,(none within B),threshold,7895,,,,,,,,,,,,,,,,,
+B4,(none within B),random_mix,15288,,,,,,,,,,,,,,,,,
+B4,(none within B),cascade,15288,,,,,,,,,,,,,,,,,
+B4,(none within B),threshold,15288,,,,,,,,,,,,,,,,,

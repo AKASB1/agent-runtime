@@ -1,0 +1,81 @@
+{
+  "id": "transportation",
+  "kind": "LP",
+  "statement": "Two warehouses supply three shops. Warehouse s1 has 30 units and s2 has 40. Shops d1, d2, and d3 need 20, 25, and 25 units. Shipping one unit costs 4, 6, 9 from s1 and 5, 3, 7 from s2 to d1, d2, d3. Meet every demand without exceeding supply at the lowest shipping cost.",
+  "data": {
+    "supply": {
+      "s1": 30,
+      "s2": 40
+    },
+    "demand": {
+      "d1": 20,
+      "d2": 25,
+      "d3": 25
+    },
+    "cost": {
+      "s1": {
+        "d1": 4,
+        "d2": 6,
+        "d3": 9
+      },
+      "s2": {
+        "d1": 5,
+        "d2": 3,
+        "d3": 7
+      }
+    }
+  },
+  "variables": {
+    "x_s1_d1": "units shipped from s1 to d1",
+    "x_s1_d2": "units shipped from s1 to d2",
+    "x_s1_d3": "units shipped from s1 to d3",
+    "x_s2_d1": "units shipped from s2 to d1",
+    "x_s2_d2": "units shipped from s2 to d2",
+    "x_s2_d3": "units shipped from s2 to d3"
+  },
+  "witnesses": [
+    {
+      "point": {
+        "x_s1_d1": 20,
+        "x_s1_d2": 0,
+        "x_s1_d3": 10,
+        "x_s2_d1": 0,
+        "x_s2_d2": 25,
+        "x_s2_d3": 15
+      },
+      "feasible": true,
+      "note": "a plan that meets every demand"
+    },
+    {
+      "point": {
+        "x_s1_d1": 0,
+        "x_s1_d2": 0,
+        "x_s1_d3": 0,
+        "x_s2_d1": 0,
+        "x_s2_d2": 0,
+        "x_s2_d3": 0
+      },
+      "feasible": false,
+      "note": "ships nothing"
+    },
+    {
+      "point": {
+        "x_s1_d1": 20,
+        "x_s1_d2": 25,
+        "x_s1_d3": 0,
+        "x_s2_d1": 0,
+        "x_s2_d2": 0,
+        "x_s2_d3": 25
+      },
+      "feasible": false,
+      "note": "ships 45 units from s1, which has 30"
+    }
+  ],
+  "tolerances": {
+    "feasibility": 1e-06,
+    "integrality": 1e-06,
+    "objective_abs": 1e-06,
+    "objective_rel": 1e-06,
+    "report_abs": 0.0001
+  }
+}

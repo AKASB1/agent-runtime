@@ -1,0 +1,57 @@
+{
+  "id": "diet",
+  "formulation": {
+    "sense": "min",
+    "variables": [
+      {
+        "name": "x_oats",
+        "lb": 0,
+        "ub": 10,
+        "type": "continuous"
+      },
+      {
+        "name": "x_milk",
+        "lb": 0,
+        "ub": 10,
+        "type": "continuous"
+      },
+      {
+        "name": "x_eggs",
+        "lb": 0,
+        "ub": 10,
+        "type": "continuous"
+      }
+    ],
+    "objective": {
+      "terms": {
+        "x_oats": 0.3,
+        "x_milk": 0.25,
+        "x_eggs": 0.5
+      },
+      "constant": 0
+    },
+    "constraints": [
+      {
+        "name": "protein",
+        "terms": {
+          "x_oats": 5,
+          "x_milk": 8,
+          "x_eggs": 13
+        },
+        "sense": ">=",
+        "rhs": 60
+      },
+      {
+        "name": "calories",
+        "terms": {
+          "x_oats": 300,
+          "x_milk": 150,
+          "x_eggs": 80
+        },
+        "sense": ">=",
+        "rhs": 1800
+      }
+    ]
+  },
+  "objective": 2.3454545454545452
+}
