@@ -1,0 +1,139 @@
+{
+  "id": "assignment",
+  "formulation": {
+    "sense": "min",
+    "variables": [
+      {
+        "name": "x_w1_t1",
+        "lb": 0,
+        "ub": 1,
+        "type": "binary"
+      },
+      {
+        "name": "x_w1_t2",
+        "lb": 0,
+        "ub": 1,
+        "type": "binary"
+      },
+      {
+        "name": "x_w1_t3",
+        "lb": 0,
+        "ub": 1,
+        "type": "binary"
+      },
+      {
+        "name": "x_w2_t1",
+        "lb": 0,
+        "ub": 1,
+        "type": "binary"
+      },
+      {
+        "name": "x_w2_t2",
+        "lb": 0,
+        "ub": 1,
+        "type": "binary"
+      },
+      {
+        "name": "x_w2_t3",
+        "lb": 0,
+        "ub": 1,
+        "type": "binary"
+      },
+      {
+        "name": "x_w3_t1",
+        "lb": 0,
+        "ub": 1,
+        "type": "binary"
+      },
+      {
+        "name": "x_w3_t2",
+        "lb": 0,
+        "ub": 1,
+        "type": "binary"
+      },
+      {
+        "name": "x_w3_t3",
+        "lb": 0,
+        "ub": 1,
+        "type": "binary"
+      }
+    ],
+    "objective": {
+      "terms": {
+        "x_w1_t1": 9,
+        "x_w1_t2": 2,
+        "x_w1_t3": 7,
+        "x_w2_t1": 6,
+        "x_w2_t2": 4,
+        "x_w2_t3": 3,
+        "x_w3_t1": 5,
+        "x_w3_t2": 8,
+        "x_w3_t3": 1
+      },
+      "constant": 0
+    },
+    "constraints": [
+      {
+        "name": "worker_w1",
+        "terms": {
+          "x_w1_t1": 1,
+          "x_w1_t2": 1,
+          "x_w1_t3": 1
+        },
+        "sense": "==",
+        "rhs": 1
+      },
+      {
+        "name": "worker_w2",
+        "terms": {
+          "x_w2_t1": 1,
+          "x_w2_t2": 1,
+          "x_w2_t3": 1
+        },
+        "sense": "==",
+        "rhs": 1
+      },
+      {
+        "name": "worker_w3",
+        "terms": {
+          "x_w3_t1": 1,
+          "x_w3_t2": 1,
+          "x_w3_t3": 1
+        },
+        "sense": "==",
+        "rhs": 1
+      },
+      {
+        "name": "task_t1",
+        "terms": {
+          "x_w1_t1": 1,
+          "x_w2_t1": 1,
+          "x_w3_t1": 1
+        },
+        "sense": "==",
+        "rhs": 1
+      },
+      {
+        "name": "task_t2",
+        "terms": {
+          "x_w1_t2": 1,
+          "x_w2_t2": 1,
+          "x_w3_t2": 1
+        },
+        "sense": "==",
+        "rhs": 1
+      },
+      {
+        "name": "task_t3",
+        "terms": {
+          "x_w1_t3": 1,
+          "x_w2_t3": 1,
+          "x_w3_t3": 1
+        },
+        "sense": "==",
+        "rhs": 1
+      }
+    ]
+  },
+  "objective": 9.0
+}

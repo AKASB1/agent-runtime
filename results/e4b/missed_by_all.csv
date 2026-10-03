@@ -1,0 +1,96 @@
+problem,operator,k,truth
+product_mix,scale_coef_10,0,objective 16000 != reference 1800
+product_mix,scale_coef_10,1,objective 12400 != reference 1800
+product_mix,scale_coef_0.1,0,the mutant's optimum is infeasible for the reference
+product_mix,scale_coef_0.1,1,objective 1240 != reference 1800
+product_mix,scale_coef_0.1,3,the mutant's optimum is infeasible for the reference
+product_mix,swap_sense,0,objective 0 != reference 1800
+product_mix,swap_sense,1,objective 0 != reference 1800
+product_mix,swap_sense,2,objective 0 != reference 1800
+product_mix,swap_sense,3,objective 0 != reference 1800
+product_mix,swap_sense,4,objective 0 != reference 1800
+diet,drop_constraint,1,the mutant's optimum is infeasible for the reference
+diet,drop_constraint,2,the mutant's optimum is infeasible for the reference
+diet,drop_constraint,3,the mutant's optimum is infeasible for the reference
+diet,drop_constraint,4,the mutant's optimum is infeasible for the reference
+diet,scale_coef_10,0,objective 4.375 != reference 2.34545
+diet,scale_coef_10,1,the mutant's optimum is infeasible for the reference
+diet,scale_coef_10,2,the mutant's optimum is infeasible for the reference
+diet,scale_coef_0.1,0,objective 2.88 != reference 2.34545
+diet,scale_coef_0.1,1,objective 0.55 != reference 2.34545
+diet,scale_coef_0.1,2,objective 2.70968 != reference 2.34545
+diet,scale_coef_0.1,4,objective 2.88 != reference 2.34545
+diet,change_rhs,0,objective 4.03016 != reference 2.34545
+diet,change_rhs,1,the mutant's optimum is infeasible for the reference
+diet,swap_sense,0,objective 10.5 != reference 2.34545
+diet,swap_sense,1,objective 10.5 != reference 2.34545
+diet,swap_sense,2,objective 10.5 != reference 2.34545
+diet,swap_sense,3,objective 10.5 != reference 2.34545
+diet,swap_sense,4,objective 10.5 != reference 2.34545
+transportation,drop_constraint,0,the mutant's optimum is infeasible for the reference
+transportation,drop_constraint,1,the mutant's optimum is infeasible for the reference
+transportation,drop_constraint,2,the mutant's optimum is infeasible for the reference
+transportation,drop_constraint,3,the mutant's optimum is infeasible for the reference
+transportation,drop_constraint,4,the mutant's optimum is infeasible for the reference
+transportation,reverse_inequality,0,the mutant's optimum is infeasible for the reference
+transportation,reverse_inequality,1,the mutant's optimum is infeasible for the reference
+transportation,reverse_inequality,2,the mutant's optimum is infeasible for the reference
+transportation,reverse_inequality,3,the mutant's optimum is infeasible for the reference
+transportation,reverse_inequality,4,the mutant's optimum is infeasible for the reference
+transportation,scale_coef_10,1,objective 420 != reference 350
+transportation,scale_coef_10,4,objective 420 != reference 350
+transportation,scale_coef_0.1,0,objective 202.5 != reference 350
+transportation,scale_coef_0.1,1,objective 278 != reference 350
+transportation,scale_coef_0.1,4,objective 285 != reference 350
+transportation,change_rhs,0,the mutant's optimum is infeasible for the reference
+transportation,change_rhs,1,the mutant's optimum is infeasible for the reference
+transportation,change_rhs,2,the mutant's optimum is infeasible for the reference
+transportation,swap_sense,0,objective 435 != reference 350
+transportation,swap_sense,1,objective 435 != reference 350
+transportation,swap_sense,2,objective 435 != reference 350
+transportation,swap_sense,3,objective 435 != reference 350
+transportation,swap_sense,4,objective 435 != reference 350
+knapsack,scale_coef_10,0,objective 137 != reference 29
+knapsack,scale_coef_10,1,objective 119 != reference 29
+knapsack,scale_coef_10,2,objective 145 != reference 29
+knapsack,scale_coef_10,4,objective 28 != reference 29
+knapsack,scale_coef_0.1,3,objective 28 != reference 29
+knapsack,swap_sense,0,objective 0 != reference 29
+knapsack,swap_sense,1,objective 0 != reference 29
+knapsack,swap_sense,2,objective 0 != reference 29
+knapsack,swap_sense,3,objective 0 != reference 29
+knapsack,swap_sense,4,objective 0 != reference 29
+knapsack,add_constraint,4,objective 28 != reference 29
+facility,drop_constraint,1,the mutant's optimum is infeasible for the reference
+facility,drop_constraint,2,the mutant's optimum is infeasible for the reference
+facility,reverse_inequality,1,the mutant's optimum is infeasible for the reference
+facility,reverse_inequality,2,the mutant's optimum is infeasible for the reference
+facility,reverse_inequality,3,objective 285 != reference 275
+facility,reverse_inequality,4,the mutant's optimum is infeasible for the reference
+facility,scale_coef_10,1,the mutant's optimum is infeasible for the reference
+facility,scale_coef_10,2,objective 285 != reference 275
+facility,scale_coef_10,4,objective 315 != reference 275
+facility,scale_coef_0.1,0,objective 261.5 != reference 275
+facility,scale_coef_0.1,1,objective 258 != reference 275
+facility,scale_coef_0.1,3,objective 285 != reference 275
+facility,scale_coef_0.1,4,objective 285 != reference 275
+facility,change_rhs,0,the mutant's optimum is infeasible for the reference
+facility,drop_integrality,0,the mutant's optimum is infeasible for the reference
+facility,drop_integrality,1,the mutant's optimum is infeasible for the reference
+facility,drop_integrality,2,the mutant's optimum is infeasible for the reference
+facility,drop_integrality,3,the mutant's optimum is infeasible for the reference
+facility,drop_integrality,4,the mutant's optimum is infeasible for the reference
+facility,swap_sense,0,objective 470 != reference 275
+facility,swap_sense,1,objective 470 != reference 275
+facility,swap_sense,2,objective 470 != reference 275
+facility,swap_sense,3,objective 470 != reference 275
+facility,swap_sense,4,objective 470 != reference 275
+facility,add_constraint,0,objective 285 != reference 275
+assignment,scale_coef_10,0,objective 14 != reference 9
+assignment,scale_coef_0.1,2,objective 14 != reference 9
+assignment,swap_sense,0,objective 21 != reference 9
+assignment,swap_sense,1,objective 21 != reference 9
+assignment,swap_sense,2,objective 21 != reference 9
+assignment,swap_sense,3,objective 21 != reference 9
+assignment,swap_sense,4,objective 21 != reference 9
+assignment,add_constraint,1,objective 14 != reference 9

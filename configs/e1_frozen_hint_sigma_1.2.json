@@ -1,0 +1,389 @@
+{
+  "budget_levels": [
+    2106,
+    4077,
+    7895,
+    15288
+  ],
+  "routers": {
+    "cascade_m-l": {
+      "chain": [
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "type": "cascade"
+    },
+    "cascade_s-l": {
+      "chain": [
+        "sim-a/small",
+        "sim-a/large"
+      ],
+      "type": "cascade"
+    },
+    "cascade_s-m-l": {
+      "chain": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "type": "cascade"
+    },
+    "fixed_large": {
+      "target": "sim-a/large",
+      "type": "fixed"
+    },
+    "fixed_medium": {
+      "target": "sim-a/medium",
+      "type": "fixed"
+    },
+    "fixed_small": {
+      "target": "sim-a/small",
+      "type": "fixed"
+    },
+    "mix_0.00_0.00_1.00": {
+      "probs": {
+        "sim-a/large": 1.0,
+        "sim-a/medium": 0.0,
+        "sim-a/small": 0.0
+      },
+      "type": "random_mix"
+    },
+    "mix_0.00_0.25_0.75": {
+      "probs": {
+        "sim-a/large": 0.75,
+        "sim-a/medium": 0.25,
+        "sim-a/small": 0.0
+      },
+      "type": "random_mix"
+    },
+    "mix_0.00_0.50_0.50": {
+      "probs": {
+        "sim-a/large": 0.5,
+        "sim-a/medium": 0.5,
+        "sim-a/small": 0.0
+      },
+      "type": "random_mix"
+    },
+    "mix_0.00_0.75_0.25": {
+      "probs": {
+        "sim-a/large": 0.25,
+        "sim-a/medium": 0.75,
+        "sim-a/small": 0.0
+      },
+      "type": "random_mix"
+    },
+    "mix_0.00_1.00_0.00": {
+      "probs": {
+        "sim-a/large": 0.0,
+        "sim-a/medium": 1.0,
+        "sim-a/small": 0.0
+      },
+      "type": "random_mix"
+    },
+    "mix_0.25_0.00_0.75": {
+      "probs": {
+        "sim-a/large": 0.75,
+        "sim-a/medium": 0.0,
+        "sim-a/small": 0.25
+      },
+      "type": "random_mix"
+    },
+    "mix_0.25_0.25_0.50": {
+      "probs": {
+        "sim-a/large": 0.5,
+        "sim-a/medium": 0.25,
+        "sim-a/small": 0.25
+      },
+      "type": "random_mix"
+    },
+    "mix_0.25_0.50_0.25": {
+      "probs": {
+        "sim-a/large": 0.25,
+        "sim-a/medium": 0.5,
+        "sim-a/small": 0.25
+      },
+      "type": "random_mix"
+    },
+    "mix_0.25_0.75_0.00": {
+      "probs": {
+        "sim-a/large": 0.0,
+        "sim-a/medium": 0.75,
+        "sim-a/small": 0.25
+      },
+      "type": "random_mix"
+    },
+    "mix_0.50_0.00_0.50": {
+      "probs": {
+        "sim-a/large": 0.5,
+        "sim-a/medium": 0.0,
+        "sim-a/small": 0.5
+      },
+      "type": "random_mix"
+    },
+    "mix_0.50_0.25_0.25": {
+      "probs": {
+        "sim-a/large": 0.25,
+        "sim-a/medium": 0.25,
+        "sim-a/small": 0.5
+      },
+      "type": "random_mix"
+    },
+    "mix_0.50_0.50_0.00": {
+      "probs": {
+        "sim-a/large": 0.0,
+        "sim-a/medium": 0.5,
+        "sim-a/small": 0.5
+      },
+      "type": "random_mix"
+    },
+    "mix_0.75_0.00_0.25": {
+      "probs": {
+        "sim-a/large": 0.25,
+        "sim-a/medium": 0.0,
+        "sim-a/small": 0.75
+      },
+      "type": "random_mix"
+    },
+    "mix_0.75_0.25_0.00": {
+      "probs": {
+        "sim-a/large": 0.0,
+        "sim-a/medium": 0.25,
+        "sim-a/small": 0.75
+      },
+      "type": "random_mix"
+    },
+    "mix_1.00_0.00_0.00": {
+      "probs": {
+        "sim-a/large": 0.0,
+        "sim-a/medium": 0.0,
+        "sim-a/small": 1.0
+      },
+      "type": "random_mix"
+    },
+    "thr_0.5_0.5": {
+      "models": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "t1": 0.5,
+      "t2": 0.5,
+      "type": "threshold"
+    },
+    "thr_0.5_1.0": {
+      "models": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "t1": 0.5,
+      "t2": 1.0,
+      "type": "threshold"
+    },
+    "thr_0.5_1.5": {
+      "models": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "t1": 0.5,
+      "t2": 1.5,
+      "type": "threshold"
+    },
+    "thr_0.5_2.0": {
+      "models": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "t1": 0.5,
+      "t2": 2.0,
+      "type": "threshold"
+    },
+    "thr_0.5_2.5": {
+      "models": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "t1": 0.5,
+      "t2": 2.5,
+      "type": "threshold"
+    },
+    "thr_0.5_3.0": {
+      "models": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "t1": 0.5,
+      "t2": 3.0,
+      "type": "threshold"
+    },
+    "thr_1.0_1.0": {
+      "models": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "t1": 1.0,
+      "t2": 1.0,
+      "type": "threshold"
+    },
+    "thr_1.0_1.5": {
+      "models": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "t1": 1.0,
+      "t2": 1.5,
+      "type": "threshold"
+    },
+    "thr_1.0_2.0": {
+      "models": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "t1": 1.0,
+      "t2": 2.0,
+      "type": "threshold"
+    },
+    "thr_1.0_2.5": {
+      "models": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "t1": 1.0,
+      "t2": 2.5,
+      "type": "threshold"
+    },
+    "thr_1.0_3.0": {
+      "models": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "t1": 1.0,
+      "t2": 3.0,
+      "type": "threshold"
+    },
+    "thr_1.5_1.5": {
+      "models": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "t1": 1.5,
+      "t2": 1.5,
+      "type": "threshold"
+    },
+    "thr_1.5_2.0": {
+      "models": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "t1": 1.5,
+      "t2": 2.0,
+      "type": "threshold"
+    },
+    "thr_1.5_2.5": {
+      "models": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "t1": 1.5,
+      "t2": 2.5,
+      "type": "threshold"
+    },
+    "thr_1.5_3.0": {
+      "models": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "t1": 1.5,
+      "t2": 3.0,
+      "type": "threshold"
+    },
+    "thr_2.0_2.0": {
+      "models": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "t1": 2.0,
+      "t2": 2.0,
+      "type": "threshold"
+    },
+    "thr_2.0_2.5": {
+      "models": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "t1": 2.0,
+      "t2": 2.5,
+      "type": "threshold"
+    },
+    "thr_2.0_3.0": {
+      "models": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "t1": 2.0,
+      "t2": 3.0,
+      "type": "threshold"
+    },
+    "thr_2.5_2.5": {
+      "models": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "t1": 2.5,
+      "t2": 2.5,
+      "type": "threshold"
+    },
+    "thr_2.5_3.0": {
+      "models": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "t1": 2.5,
+      "t2": 3.0,
+      "type": "threshold"
+    },
+    "thr_3.0_3.0": {
+      "models": [
+        "sim-a/small",
+        "sim-a/medium",
+        "sim-a/large"
+      ],
+      "t1": 3.0,
+      "t2": 3.0,
+      "type": "threshold"
+    }
+  },
+  "selected": {
+    "cascade": {
+      "B3": "cascade_m-l"
+    },
+    "random_mix": {
+      "B3": "mix_0.00_1.00_0.00"
+    },
+    "threshold": {
+      "B3": ""
+    }
+  },
+  "variant": {
+    "hint_sigma": 1.2,
+    "tag": "_hint_sigma_1.2"
+  }
+}

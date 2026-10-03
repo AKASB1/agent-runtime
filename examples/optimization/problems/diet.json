@@ -1,0 +1,66 @@
+{
+  "id": "diet",
+  "kind": "LP",
+  "statement": "Choose daily servings of oats, milk, and eggs at the lowest cost. A serving costs 0.30, 0.25, and 0.50, gives 5, 8, and 13 grams of protein, and 300, 150, and 80 kilocalories. The diet needs at least 60 grams of protein and 1800 kilocalories, and at most 10 servings of each food. Fractional servings are allowed.",
+  "data": {
+    "cost": {
+      "oats": 0.3,
+      "milk": 0.25,
+      "eggs": 0.5
+    },
+    "protein": {
+      "oats": 5,
+      "milk": 8,
+      "eggs": 13,
+      "min": 60
+    },
+    "calories": {
+      "oats": 300,
+      "milk": 150,
+      "eggs": 80,
+      "min": 1800
+    },
+    "max_servings": 10
+  },
+  "variables": {
+    "x_oats": "servings of oats",
+    "x_milk": "servings of milk",
+    "x_eggs": "servings of eggs"
+  },
+  "witnesses": [
+    {
+      "point": {
+        "x_oats": 10,
+        "x_milk": 10,
+        "x_eggs": 10
+      },
+      "feasible": true,
+      "note": "ten servings of everything"
+    },
+    {
+      "point": {
+        "x_oats": 6,
+        "x_milk": 0,
+        "x_eggs": 1
+      },
+      "feasible": false,
+      "note": "only 43 grams of protein"
+    },
+    {
+      "point": {
+        "x_oats": 0,
+        "x_milk": 0,
+        "x_eggs": 0
+      },
+      "feasible": false,
+      "note": "eats nothing"
+    }
+  ],
+  "tolerances": {
+    "feasibility": 1e-06,
+    "integrality": 1e-06,
+    "objective_abs": 1e-06,
+    "objective_rel": 1e-06,
+    "report_abs": 0.0001
+  }
+}

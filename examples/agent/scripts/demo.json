@@ -1,0 +1,14 @@
+{
+  "description": "A scripted agent (data, not a model): it writes and reads a file, edits it, runs a harmless command, is denied a write outside its workspace, and delegates a lookup to a child agent. It shows the harness, not a model.",
+  "steps": [
+    {"tool_calls": [{"id": "a1", "name": "fs_write", "arguments": {"path": "notes.txt", "content": "title: harness demo\nstatus: draft\nowner: agent\n", "mode": "overwrite"}}]},
+    {"tool_calls": [{"id": "a2", "name": "fs_read", "arguments": {"path": "notes.txt"}}]},
+    {"tool_calls": [{"id": "a3", "name": "fs_edit", "arguments": {"path": "notes.txt", "old": "status: draft", "new": "status: reviewed"}}]},
+    {"tool_calls": [{"id": "a4", "name": "run_command", "arguments": {"argv": ["python", "-c", "print(open('notes.txt').read().count('reviewed'))"]}}]},
+    {"tool_calls": [{"id": "a5", "name": "fs_write", "arguments": {"path": "../escape.txt", "content": "this write must be denied"}}]},
+    {"tool_calls": [{"id": "a6", "name": "delegate", "arguments": {"agent": "lookup", "task": "How many lines does notes.txt have?"}}]},
+    {"tool_calls": [{"id": "c1", "name": "fs_read", "arguments": {"path": "notes.txt"}}]},
+    {"text": "notes.txt has 3 lines."},
+    {"text": "Done: notes.txt is reviewed (the command counted 1 match), the write outside the workspace was denied, and the helper counted 3 lines."}
+  ]
+}

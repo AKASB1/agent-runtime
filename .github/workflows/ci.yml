@@ -1,0 +1,33 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONUTF8: "1"
+      NO_PROXY: "127.0.0.1,localhost"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: python -m pip install -e ".[api,mcp,eval,dev]"
+      - name: Lint
+        run: |
+          ruff check src tests scripts examples
+          ruff format --check src tests scripts examples
+      - name: Tests
+        run: python -m pytest -q
+      - name: OpenAPI drift
+        run: python -m pytest -q tests/test_api.py -k openapi
+      - name: Quick benchmark (simulated)
+        run: python -m agent_runtime eval --quick --workers 2 --load-note "CI runner"

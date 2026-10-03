@@ -1,0 +1,34 @@
+{
+  "commit": "5240befffd8d4cf129239c5aee7d5f97f0d5c003",
+  "config_sha256": "5ed4060bd546453c260f6fde406f1228f861a21403f89e7fd88ddcd4ad57320b",
+  "experiment": "e1_sensitivity/recall_0.5-tuning",
+  "label": "simulated",
+  "libraries": {
+    "fastapi": "0.142.2",
+    "httpx": "0.28.1",
+    "matplotlib": "3.11.2",
+    "mcp": "2.2.0",
+    "numpy": "2.5.3",
+    "pydantic": "2.13.5",
+    "scipy": "1.18.1"
+  },
+  "load_note": "0 other active runs, 8 workers, CPU load 22% sampled for 10 s before the run (owner's jobs)",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "python": "3.12.3",
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "task_runs": 126000,
+  "tasks_per_s_wall": 931.3,
+  "wall_s": 135.3,
+  "workers": 8
+}

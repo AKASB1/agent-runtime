@@ -1,0 +1,48 @@
+{
+  "id": "product_mix",
+  "formulation": {
+    "sense": "max",
+    "variables": [
+      {
+        "name": "x_a",
+        "lb": 0,
+        "ub": 40,
+        "type": "continuous"
+      },
+      {
+        "name": "x_b",
+        "lb": 0,
+        "ub": null,
+        "type": "continuous"
+      }
+    ],
+    "objective": {
+      "terms": {
+        "x_a": 30,
+        "x_b": 20
+      },
+      "constant": 0
+    },
+    "constraints": [
+      {
+        "name": "machine_hours",
+        "terms": {
+          "x_a": 2,
+          "x_b": 1
+        },
+        "sense": "<=",
+        "rhs": 100
+      },
+      {
+        "name": "labor_hours",
+        "terms": {
+          "x_a": 1,
+          "x_b": 1
+        },
+        "sense": "<=",
+        "rhs": 80
+      }
+    ]
+  },
+  "objective": 1800.0
+}

@@ -1,0 +1,23 @@
+{
+  "problem": "knapsack",
+  "note": "Scripted candidates stand in for a language model; the last candidate is correct and the earlier ones carry typical mistakes.",
+  "candidates": [
+    {
+      "text": "{\"sense\": \"max\", \"variables\": [{\"name\": \"x_1\", \"lb\": 0, \"ub\": 1, \"type\": \"continuous\"}, {\"name\": \"x_2\", \"lb\": 0, \"ub\": 1, \"type\": \"continuous\"}, {\"name\": \"x_3\", \"lb\": 0, \"ub\": 1, \"type\": \"continuous\"}, {\"name\": \"x_4\", \"lb\": 0, \"ub\": 1, \"type\": \"continuous\"}, {\"name\": \"x_5\", \"lb\": 0, \"ub\": 1, \"type\": \"continuous\"}, {\"name\": \"x_6\", \"lb\": 0, \"ub\": 1, \"type\": \"continuous\"}], \"objective\": {\"terms\": {\"x_1\": 10, \"x_2\": 7, \"x_3\": 12, \"x_4\": 5, \"x_5\": 13, \"x_6\": 3}, \"constant\": 0}, \"constraints\": [{\"name\": \"capacity\", \"terms\": {\"x_1\": 5, \"x_2\": 4, \"x_3\": 6, \"x_4\": 3, \"x_5\": 7, \"x_6\": 2}, \"sense\": \"<=\", \"rhs\": 15}]}",
+      "mistake": "integrality dropped (continuous 0..1)",
+      "expect": "V4_INFEASIBLE_WITNESS_ACCEPTED"
+    },
+    {
+      "text": "{\"sense\": \"max\", \"variables\": [{\"name\": \"x_1\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}, {\"name\": \"x_2\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}, {\"name\": \"x_3\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}, {\"name\": \"x_4\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}, {\"name\": \"x_5\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}, {\"name\": \"x_6\", \"lb\": 0, \"ub\": 1, \"type\": \"binary\"}], \"objective\": {\"terms\": {\"x_1\": 10, \"x_2\": 7, \"x_3\": 12, \"x_4\": 5, \"x_5\": 13, \"x_6\": 3}, \"constant\": 0}, \"constraints\": [{\"name\": \"capacity\", \"terms\": {\"x_1\": 5, \"x_2\": 4, \"x_3\": 6, \"x_4\": 3, \"x_5\": 7, \"x_6\": 2}, \"sense\": \"<=\", \"rhs\": 15}]}",
+      "mistake": null,
+      "expect": null
+    }
+  ],
+  "reports": [
+    {
+      "text": "{\"objective\": 29.0, \"values\": {\"x_1\": 1.0, \"x_2\": 1.0, \"x_3\": 1.0, \"x_4\": 0.0, \"x_5\": 0.0, \"x_6\": 0.0}}",
+      "mistake": null,
+      "expect": null
+    }
+  ]
+}

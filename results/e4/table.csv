@@ -1,0 +1,7 @@
+accepted_candidate_mistake,accepted_objective,candidate_codes,candidates_tried,cost_mcu_estimated,kind,model_calls,objective_matches,problem,reference_objective,report_codes,status,tool_calls
+,1800,"V4_INFEASIBLE_WITNESS_ACCEPTED | V4_FEASIBLE_WITNESS_REJECTED,V4_INFEASIBLE_WITNESS_ACCEPTED | accepted",3,4.382,LP,5,1,product_mix,1800,V5_REPORT_MISMATCH | accepted,succeeded,8
+,2.34545,V4_INFEASIBLE_WITNESS_ACCEPTED | V1_PARSE | accepted,3,3.503,LP,4,1,diet,2.34545,accepted,succeeded,5
+,350,V1_UNDECLARED_VARIABLE | V4_INFEASIBLE_WITNESS_ACCEPTED | accepted,3,6.693,LP,4,1,transportation,350,accepted,succeeded,7
+,29,V4_INFEASIBLE_WITNESS_ACCEPTED | accepted,2,2.818,ILP,3,1,knapsack,29,accepted,succeeded,5
+"missing constraint (capacity of f1), not binding at the optimum and violated by no infeasible witness: the verifier's blind spot",275,V2_UNBOUNDED | accepted,2,4.955,MILP,3,1,facility,275,accepted,succeeded,5
+,9,V1_MISSING_CARD_VARIABLE | accepted,2,6.435,ILP,4,1,assignment,9,V5_REPORT_MISMATCH | accepted,succeeded,6

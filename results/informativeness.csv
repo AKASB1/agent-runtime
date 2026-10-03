@@ -1,0 +1,13 @@
+experiment,group,metric,configs,spread,max_se,separates
+e1,B1 selected routers,success,1,0,0.00656961,0
+e1,B2 selected routers,success,1,0,0.00646458,0
+e1,B3 selected routers,success,3,0.206666,0.00964876,1
+e1,B4 selected routers,success,3,0.0070002,0.0108349,0
+e1,fixed models,success,3,0.362333,0.00964876,1
+e2,calm,success,3,0.0130741,0.0105913,1
+e2,flaky,success,3,0.236262,0.0103019,1
+e2,brownout,success,3,0.158476,0.0124883,1
+e3,f00,latency_p50_ms,13,4515.8,152.209,1
+e3,f00 (success),success,13,0.11,0.0113725,1
+e3,f10,latency_p50_ms,13,4510.35,150.445,1
+e3,f10 (success),success,13,0.113,0.011403,1

@@ -14,10 +14,16 @@ dist/
 build/
 *.egg-info/
 .ipynb_checkpoints/
-logs/
-tmp/
-traces/
-eval-results/
+/logs/
+/tmp/
+/traces/
+/eval-results/
 .DS_Store
 .idea/
 .vscode/
+
+# Private planning notes
+*.local.md
+
+# Claude Code
+.claude/
