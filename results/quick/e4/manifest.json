@@ -13,7 +13,7 @@
     "scipy": "1.18.1"
   },
   "load_note": "0 other active runs, 4 workers, CPU load 19% sampled for 10 s before the run (owner's jobs)",
-  "platform": "Windows-11-10.0.26100-SP0",
+  "platform": "Windows 11",
   "python": "3.12.3",
   "seeds": [],
   "task_runs": 6,

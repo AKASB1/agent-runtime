@@ -2,9 +2,11 @@
 
     python scripts/plot_results.py [--results results] [--out docs/figures]
 
-- framework.png: the harness layers and their status (built, Tier 2, absent)
+- framework() draws the former framework.png (the harness layers and their status); main() no longer calls it,
+  the architecture diagram docs/figures/architecture.svg replaces it
 - timeline_plan_execute.png: one plan_execute run from examples/traces/plan_execute_wide.jsonl
 - e1_success_vs_cost.png, e2_brownout_windows.png, e3_makespan_vs_k.png: simulated results
+- readme_e1.png, readme_e2.png: the E1 and E2 figures at README font sizes
 """
 
 from __future__ import annotations
@@ -61,7 +63,9 @@ def num(x: str) -> float:
 
 def save(fig, out: Path, name: str) -> None:
     out.mkdir(parents=True, exist_ok=True)
-    fig.savefig(out / name, dpi=110, bbox_inches="tight")
+    # README versions carry no tool metadata; the other figures stay as committed
+    meta = {"Software": None} if name.startswith("readme_") else None
+    fig.savefig(out / name, dpi=110, bbox_inches="tight", metadata=meta)
     plt.close(fig)
     size = (out / name).stat().st_size
     assert size < 300_000, f"{name} is {size} bytes"
@@ -81,16 +85,16 @@ LAYERS = [
     ("Session and state", "SQLite store, append-only log, versioned state", "built"),
     ("Retry and recovery", "retry, fallback, repair, budgets, cancellation", "built"),
     ("Observability", "trace with replay, GenAI attribute names", "built"),
-    ("Skills", "catalog in the prompt, load_skill (Tier 2 item, built)", "built"),
-    ("Breaker, hedging, resume", "", "tier2"),
-    ("Anthropic adapter", "", "tier2"),
-    ("OTel export, PostgreSQL", "", "tier2"),
-    ("Retrieval, memory", "scaffold protocol only", "tier2"),
+    ("Skills", "catalog in the prompt, load_skill (later item, built)", "built"),
+    ("Breaker, hedging, resume", "", "planned"),
+    ("Anthropic adapter", "", "planned"),
+    ("OTel export, PostgreSQL", "", "planned"),
+    ("Retrieval, memory", "scaffold protocol only", "planned"),
     ("Plugins, hooks, web UI", "out of scope on purpose", "absent"),
 ]
 STATUS = {
-    "built": (BLUE, "built (Tier 1)"),
-    "tier2": (YELLOW, "Tier 2: not built"),
+    "built": (BLUE, "built"),
+    "planned": (YELLOW, "planned, not built"),
     "absent": (NEUTRAL, "absent on purpose"),
 }
 
@@ -169,9 +173,16 @@ def timeline(out: Path) -> None:
 # -- E1 -----------------------------------------------------------------------------------------------
 
 
-def e1(results: Path, out: Path) -> None:
+def e1(
+    results: Path,
+    out: Path,
+    name: str = "e1_success_vs_cost.png",
+    fs: float = 1.0,
+    figsize: tuple[float, float] = (7.6, 4.6),
+    title: str | None = None,
+) -> None:
     table = read_csv(results / "e1" / "table.csv")
-    fig, ax = plt.subplots(figsize=(7.6, 4.6))
+    fig, ax = plt.subplots(figsize=figsize)
     fams = [("random_mix", BLUE, "o"), ("cascade", ORANGE, "s"), ("threshold", AQUA, "^")]
     for fam, color, marker in fams:
         pts = [r for r in table if r["router"] == fam and r.get("cost_ucu")]
@@ -210,7 +221,7 @@ def e1(results: Path, out: Path) -> None:
                 (x, y),
                 textcoords="offset points",
                 xytext=(6, -12),
-                fontsize=8,
+                fontsize=8 * fs,
                 color=INK2,
             )
         if r["router"] == "oracle":
@@ -234,7 +245,7 @@ def e1(results: Path, out: Path) -> None:
             0.0,
             f" B{i + 1}",
             color=INK2,
-            fontsize=8,
+            fontsize=8 * fs,
             va="bottom",
             transform=ax.get_xaxis_transform(),
         )
@@ -243,18 +254,27 @@ def e1(results: Path, out: Path) -> None:
     ax.set_ylabel("success rate")
     n = max(int(num(r["n_seeds"])) for r in table if r.get("n_seeds"))
     ax.set_title(
-        f"E1: success against cost, {n} seeds, 95% intervals  [" + SIMULATED + "]", loc="left", fontsize=8.5
+        title or f"E1: success against cost, {n} seeds, 95% intervals  [" + SIMULATED + "]",
+        loc="left",
+        fontsize=8.5 * fs,
     )
-    ax.legend(loc="upper left", fontsize=8)
-    save(fig, out, "e1_success_vs_cost.png")
+    ax.legend(loc="upper left", fontsize=8 * fs)
+    save(fig, out, name)
 
 
 # -- E2 -----------------------------------------------------------------------------------------------
 
 
-def e2(results: Path, out: Path) -> None:
+def e2(
+    results: Path,
+    out: Path,
+    name: str = "e2_brownout_windows.png",
+    fs: float = 1.0,
+    figsize: tuple[float, float] = (7.6, 3.9),
+    title: str | None = None,
+) -> None:
     rows = read_csv(results / "e2" / "brownout_windows.csv")
-    fig, ax = plt.subplots(figsize=(7.6, 3.9))
+    fig, ax = plt.subplots(figsize=figsize)
     ax.axvspan(150, 270, color="#f0efec", zorder=0)
     ax.text(
         210,
@@ -262,7 +282,7 @@ def e2(results: Path, out: Path) -> None:
         "brownout: sim-a returns 5xx",
         ha="center",
         va="top",
-        fontsize=8,
+        fontsize=8 * fs,
         color=INK2,
         transform=ax.get_xaxis_transform(),
     )
@@ -298,12 +318,39 @@ def e2(results: Path, out: Path) -> None:
     ax.set_ylim(0, 1)
     n = max(int(num(r["n_seeds"])) for r in rows)
     ax.set_title(
-        f"E2 brownout: success per arrival window, {n} seeds, 95% bands  [" + SIMULATED + "]",
+        title or f"E2 brownout: success per arrival window, {n} seeds, 95% bands  [" + SIMULATED + "]",
         loc="left",
-        fontsize=8.5,
+        fontsize=8.5 * fs,
     )
-    ax.legend(loc="lower left", fontsize=8)
-    save(fig, out, "e2_brownout_windows.png")
+    ax.legend(loc="lower left", fontsize=8 * fs)
+    save(fig, out, name)
+
+
+# -- README versions ----------------------------------------------------------------------------------
+
+README_RC = {"font.size": 11, "axes.titlesize": 11}
+
+
+def readme_figures(results: Path, out: Path) -> None:
+    """E1 and E2 at README font sizes (text 10 pt, titles about 10.6 pt, axis labels 11 pt at 110 dpi, under
+    880 px wide); the same data and marks as e1_success_vs_cost.png and e2_brownout_windows.png."""
+    with plt.rc_context(README_RC):
+        e1(
+            results,
+            out,
+            "readme_e1.png",
+            1.25,
+            (8.0, 5.0),
+            "E1: success against cost (simulated, 95% intervals)",
+        )
+        e2(
+            results,
+            out,
+            "readme_e2.png",
+            1.25,
+            (8.0, 4.2),
+            "E2 brownout: success per arrival window (simulated)",
+        )
 
 
 # -- E3 -----------------------------------------------------------------------------------------------
@@ -372,9 +419,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--out", default=str(ROOT / "docs" / "figures"))
     a = p.parse_args(argv)
     results, out = Path(a.results), Path(a.out)
-    framework(out)
     timeline(out)
-    for name, fn in (("e1", e1), ("e2", e2), ("e3", e3)):
+    for name, fn in (("e1", e1), ("e2", e2), ("e3", e3), ("readme", readme_figures)):
         try:
             fn(results, out)
         except FileNotFoundError as e:

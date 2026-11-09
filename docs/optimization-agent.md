@@ -1,6 +1,6 @@
-# The worked example: an optimization-modelling agent
+# The worked example: an optimization-modeling agent
 
-A model formulates, a solver solves, a verifier checks. The workflow (`optimize`) is an ordinary workflow of this runtime, built from its public API; the solver and the verifier are tools of an MCP server (`python -m agent_runtime.optimization.server`). **The model is scripted**: each problem has a fixed sequence of candidate formulations in `examples/optimization/scripts/` (data). The example shows the runtime and the verifier at work and says nothing about any model's modelling ability.
+A model formulates, a solver solves, a verifier checks. The workflow (`optimize`) is an ordinary workflow of this runtime, built from its public API; the solver and the verifier are tools of an MCP server (`python -m agent_runtime.optimization.server`). **The model is scripted**: each problem has a fixed sequence of candidate formulations in `examples/optimization/scripts/` (data). The example shows the runtime and the verifier at work and says nothing about any model's modeling ability.
 
 ## Flow
 
@@ -48,8 +48,8 @@ A malformed formulation (not JSON, wrong shape) is caught by the structured-outp
 
 ## Results (E4a)
 
-The table of the run on commit `5240bef` is in [`results/e4/table.csv`](../results/e4/table.csv) and in the README. All six runs end `succeeded` with an accepted objective equal to the reference (product_mix 1800, diet 2.34545, transportation 350, knapsack 29, facility 275, assignment 9), after 2 or 3 candidates and 3 to 5 model calls. Every wrong candidate except the blind spot gets the diagnostic its script expects; the reversed inequality of `product_mix` also accepts an infeasible witness, so it gets `V4_FEASIBLE_WITNESS_REJECTED` and `V4_INFEASIBLE_WITNESS_ACCEPTED`. Both misreports get `V5_REPORT_MISMATCH`. The verifier study (E4b, Tier 2) is in [evaluation.md](evaluation.md) and [`results/tables.md`](../results/tables.md). Model costs are simulated: the scripted target is priced like the simulated `medium` model and its token counts are estimates (UTF-8 bytes / 4), so the costs are labelled estimated.
+The table of the run on commit `5240bef` is in [`results/e4/table.csv`](../results/e4/table.csv) and in [results.md](results.md#e4-the-optimization-agent). All six runs end `succeeded` with an accepted objective equal to the reference (product_mix 1800, diet 2.34545, transportation 350, knapsack 29, facility 275, assignment 9), after 2 or 3 candidates and 3 to 5 model calls. Every wrong candidate except the blind spot gets the diagnostic its script expects; the reversed inequality of `product_mix` also accepts an infeasible witness, so it gets `V4_FEASIBLE_WITNESS_REJECTED` and `V4_INFEASIBLE_WITNESS_ACCEPTED`. Both misreports get `V5_REPORT_MISMATCH`. The verifier study (E4b, a later study) is in [evaluation.md](evaluation.md) and [`results/tables.md`](../results/tables.md). Model costs are simulated: the scripted target is priced like the simulated `medium` model and its token counts are estimates (UTF-8 bytes / 4), so the costs are labeled estimated.
 
 ## A note on public benchmarks
 
-The public benchmarks for natural-language optimization modelling (NL4Opt, MAMO, IndustryOR, and others) have documented annotation errors (see the audits cited in "Constructing Industrial-Scale Optimization Modeling Benchmark", arXiv 2602.10450). They are not used as ground truth here, and no error rates are quoted.
+The public benchmarks for natural-language optimization modeling (NL4Opt, MAMO, IndustryOR, and others) have documented annotation errors (see the audits cited in "Constructing Industrial-Scale Optimization Modeling Benchmark", arXiv 2602.10450). They are not used as ground truth here, and no error rates are quoted.

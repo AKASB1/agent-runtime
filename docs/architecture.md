@@ -28,7 +28,7 @@ src/agent_runtime/
   evals/            evaluation runner, statistics, experiments E1-E3, E5 (context_study), E6 (delegation_study), report, commands
   api/              FastAPI service
   cli.py            python -m agent_runtime ...
-  retrieval/, memory/   scaffold protocols (Tier 2, not built further)
+  retrieval/, memory/   scaffold protocols (planned, not built further)
 ```
 
 Domain code (models, the engine, the derivation and the policies, the permission decision, routers, planners, the simulator, the statistics) imports no web framework and no database driver and reads time only from a `Clock`; a test fails if any module except `clock.py` (and two test doubles) calls the wall clock.

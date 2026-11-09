@@ -5,15 +5,15 @@ This project is a small agent runtime at the level of a harness: the layer betwe
 | Harness layer | In this repository (modules) | Status |
 |---|---|---|
 | Agent loop | `runtime/engine.py` (Run), `workflow/workflows.py` (react, react_parallel, plan_execute, plan_replan, agent, attempt loop; `delegate_plan` for E6), `planning/` (validator, list scheduler) | built |
-| Model adapters | `providers/scripted.py`, `sim/model.py` (simulated), `providers/openai_chat.py` (dialects openai, deepseek; tested against a local stand-in only) | built; Anthropic Messages: Tier 2, not built |
+| Model adapters | `providers/scripted.py`, `sim/model.py` (simulated), `providers/openai_chat.py` (dialects openai, deepseek; tested against a local stand-in only) | built; Anthropic Messages: planned, not built |
 | Context manager | `context/derive.py` (derivation, none/window/elide/summarize, hysteresis), compaction events in `store/`, fork | built |
 | Tool runtime | `tools/` (typed registry), `mcp/` (MCP over stdio on the mcp SDK), `workspace/` (files, exec without shell, HTTP GET) | built |
-| Skills | `agents/skills.py` (a directory of `SKILL.md` files; the catalog in the system prompt; `load_skill`; catalog and body tokens counted per run) | built (Tier 2 item) |
+| Skills | `agents/skills.py` (a directory of `SKILL.md` files; the catalog in the system prompt; `load_skill`; catalog and body tokens counted per run) | built (later item) |
 | Subagents | `agents/` (catalog, delegate), `Run._run_child` (fresh context, allowlist, budget share, depth limit, nested spans) | built |
 | Session and state | `store/` (SQLite and memory; append-only log, versioned state, restart persistence) | built |
 | Permissions | `permissions/policy.py` (sandbox and approval modes, path, command, and host policy, approver), `workspace/paths.py` | built; policy inside the process, not isolation by the operating system |
-| Retry and recovery | engine: retry with jitter, fallback, repair, budgets, cancellation | built; resume, circuit breaker, hedging: Tier 2, not built |
-| Observability | `telemetry/trace.py` (JSON Lines spans with GenAI attribute names, `validate_trace`), `runtime/replay.py` | built; OpenTelemetry export: Tier 2, not built |
+| Retry and recovery | engine: retry with jitter, fallback, repair, budgets, cancellation | built; resume, circuit breaker, hedging: planned, not built |
+| Observability | `telemetry/trace.py` (JSON Lines spans with GenAI attribute names, `validate_trace`), `runtime/replay.py` | built; OpenTelemetry export: planned, not built |
 | Agent API | `api/` (FastAPI), `cli.py` | built |
 
 ## What the permission layer is and is not
@@ -40,4 +40,4 @@ The public design documents of DeepSeek's open-source agent harness (`deepseek-a
 
 ## Absent on purpose
 
-A plugin framework, a hook system, a web interface, session format migrations, OS-level sandbox backends, agent teams, browser or computer use. Retrieval and persistent memory are a Tier 2 item that was not built (the scaffold's `Retriever` protocol and in-memory `MemoryStore` stay as they were; README `## TODO`).
+A plugin framework, a hook system, a web interface, session format migrations, OS-level sandbox backends, agent teams, browser or computer use. Retrieval and persistent memory are a planned item that was not built (the scaffold's `Retriever` protocol and in-memory `MemoryStore` stay as they were; README `## TODO`).

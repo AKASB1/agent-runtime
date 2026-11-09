@@ -13,22 +13,22 @@ Keep the runtime deterministic where possible. Model generation is one step insi
 
 Formats and rules: [docs/contracts.md](docs/contracts.md). Layers: [docs/harness.md](docs/harness.md).
 
-## Delivery order (Tier 1 = M1-M12)
+## Delivery order
 
-- [x] M1 Foundations: toolchain, clock and virtual-time loop, seeded streams, contracts
-- [x] M2 Models and providers: types and error taxonomy, registry, accounting, scripted model, OpenAI-compatible adapter (dialects `openai`, `deepseek`), stand-in server, structured output with repair, `scripts/live_smoke.py`
-- [x] M3 Tools and MCP: typed registry, MCP stdio client (SDK 2.2.0) with PID-owned lifecycle, native-vs-MCP equivalence
-- [x] M4 Workflow, state, trace, replay: engine (sequential and parallel, budgets, cancellation), SQLite store, session log and derivation, trace and `validate_trace`, replay with divergence report
-- [x] M5 Simulator and runner: world, tasks, verifier, simulated model, faults, evaluation runner and statistics
-- [x] M6 Decision layer: retry, fallback, failure table; routers `fixed`, `random_mix`, `cascade`, `threshold`, offline oracle; planner modes, plan validator, list scheduler; informativeness check
-- [x] M7 Context manager: policies `none`, `window`, `elide`, `summarize`, compaction with hysteresis, fork
-- [x] M8 Workspace tools and permissions: resolver, decision table, approver, permission spans, env allowlist, caps, process-tree kill
-- [x] M9 Subagents: `delegate`, catalog, allowlist, shared meter and budget share, depth limit, nested spans, replay and cancellation
-- [x] M10 Worked example: six problems, MCP solver and verifier, `optimize` workflow, E4a
-- [x] M11 API and operations: FastAPI service, ceilings, fork, context endpoint, OpenAPI drift test, JSON logs, CLI, demo
-- [x] M12 Evaluation and delivery: reviews, full evaluation (E1-E3, E4a, and the Tier 2 studies E4b, E5, E6), figures, documentation, CI file
+- [x] Foundations: toolchain, clock and virtual-time loop, seeded streams, contracts
+- [x] Models and providers: types and error taxonomy, registry, accounting, scripted model, OpenAI-compatible adapter (dialects `openai`, `deepseek`), stand-in server, structured output with repair, `scripts/live_smoke.py`
+- [x] Tools and MCP: typed registry, MCP stdio client (SDK 2.2.0) with PID-owned lifecycle, native-vs-MCP equivalence
+- [x] Workflow, state, trace, replay: engine (sequential and parallel, budgets, cancellation), SQLite store, session log and derivation, trace and `validate_trace`, replay with divergence report
+- [x] Simulator and runner: world, tasks, verifier, simulated model, faults, evaluation runner and statistics
+- [x] Decision layer: retry, fallback, failure table; routers `fixed`, `random_mix`, `cascade`, `threshold`, offline oracle; planner modes, plan validator, list scheduler; informativeness check
+- [x] Context manager: policies `none`, `window`, `elide`, `summarize`, compaction with hysteresis, fork
+- [x] Workspace tools and permissions: resolver, decision table, approver, permission spans, env allowlist, caps, process-tree kill
+- [x] Subagents: `delegate`, catalog, allowlist, shared meter and budget share, depth limit, nested spans, replay and cancellation
+- [x] Worked example: six problems, MCP solver and verifier, `optimize` workflow, E4a
+- [x] API and operations: FastAPI service, ceilings, fork, context endpoint, OpenAPI drift test, JSON logs, CLI, demo
+- [x] Evaluation and delivery: code reviews, full evaluation (E1-E3, E4a, and the later studies E4b, E5, E6), figures, documentation, CI file
 
-Tier 2, built in this run: [x] context study E5, [x] verifier study E4b, [x] skills (catalog and `load_skill`), [x] delegation study E6 (`delegate_plan`). Not run: live validation E7 (no endpoint configured). Not built (see the README's `## TODO`): durable resume, approvals and steering over the API, Anthropic Messages adapter, circuit breaker and hedging, tool routing, wire conformance against the serving gateway of `llm-serving-control`, OpenTelemetry export, PostgreSQL parity, retrieval and persistent memory.
+Later items, built: [x] context study E5, [x] verifier study E4b, [x] skills (catalog and `load_skill`), [x] delegation study E6 (`delegate_plan`). Not run: live validation E7 (no endpoint configured). Not built (see the [limitations](docs/results.md#limitations)): durable resume, approvals and steering over the API, Anthropic Messages adapter, circuit breaker and hedging, tool routing, wire conformance against the serving gateway of `llm-serving-control`, OpenTelemetry export, PostgreSQL parity, retrieval and persistent memory.
 
 ## Decision problem
 
@@ -47,8 +47,8 @@ See [docs/evaluation.md](docs/evaluation.md): frozen protocol (tuning seeds 1-10
 ## Cross-project contracts
 
 - The conventions (time, randomness, units, determinism, frozen configurations, disjoint seeds, common random numbers, paired differences, simple baselines) follow version 1 of the contracts of `llm-serving-control` and `gpu-cluster-scheduler`. No code is shared with them; this repository defines its own contracts in [docs/contracts.md](docs/contracts.md).
-- The runtime's OpenAI-compatible adapter is what a client of the OpenAI-compatible gateway of `llm-serving-control` would use; this is **not tested** (the wire-conformance run against that gateway is Tier 2 and did not run).
+- The runtime's OpenAI-compatible adapter is what a client of the OpenAI-compatible gateway of `llm-serving-control` would use; this is **not tested** (the wire-conformance run against that gateway is planned and did not run).
 
 ## Status checkpoint
 
-All of Tier 1 and the Tier 2 items E4b, E5, skills, and E6 are implemented, tested, and evaluated in simulation (see the README for the test, benchmark, and demo commands and the results). Models are simulated or scripted; the OpenAI-compatible adapter was tested only against the local stand-in.
+The core and the later items E4b, E5, skills, and E6 are implemented, tested, and evaluated in simulation (see the README for the test, benchmark, and demo commands, and [docs/results.md](docs/results.md) for the results). Models are simulated or scripted; the OpenAI-compatible adapter was tested only against the local stand-in.

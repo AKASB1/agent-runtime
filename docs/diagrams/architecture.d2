@@ -1,0 +1,31 @@
+vars: {
+  d2-config: {
+    sketch: true
+    layout-engine: elk
+    pad: 24
+  }
+}
+classes: {
+  comp: {style: {fill: "#EDE4FA"; stroke: "#6D3FB3"; stroke-width: 2; font-size: 22; font-color: "#1F2328"; border-radius: 6}}
+  ext: {style: {fill: "#FFFFFF"; stroke: "#57606A"; stroke-width: 2; font-size: 22; font-color: "#1F2328"}}
+  store: {shape: cylinder; style: {fill: "#FFFFFF"; stroke: "#6D3FB3"; stroke-width: 2; font-size: 22; font-color: "#1F2328"}}
+  flow: {style: {stroke: "#424A53"; stroke-width: 2; font-size: 22; font-color: "#1F2328"}}
+}
+direction: right
+
+loop: "agent loop\nplanner modes · routers\nCLI · HTTP API" {class: comp}
+store: "session log\nSQLite" {class: store}
+context: "context manager\ncompaction" {class: comp}
+models: "model adapters\nretry · fallback" {class: comp}
+permissions: "permission layer" {class: comp}
+tools: "tool runtime\nnative · MCP · workspace" {class: comp}
+trace: "trace\nreplay" {class: comp}
+providers: "simulated models ·\nOpenAI-compatible" {class: ext}
+
+loop -> context {class: flow}
+store -> context {class: flow}
+loop -> models {class: flow}
+loop -> permissions {class: flow}
+permissions -> tools {class: flow}
+loop -> trace {class: flow}
+models -> providers {class: flow}
